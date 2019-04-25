@@ -1,4 +1,4 @@
-const url = "http://localhost:8084/jwtbackend/api/";
+const url = "https://madsjustesen.dk/jwtbackend/api/";
 
 function makeOptions(method, body, token) {
     var opts = {
@@ -42,7 +42,7 @@ class DataFacade {
     }
 
     getApi = () => {
-        const options = makeOptions("GET", token);
+        const options = makeOptions("GET");
         return fetch(url + "info/apis").then(handleHttpErrors);
     }
 
