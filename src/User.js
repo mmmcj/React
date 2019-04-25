@@ -5,7 +5,7 @@ import df from './datafacade';
 
 const User = ({ match, persons }) => {
 
-  console.log(persons);
+  console.log(persons.persons);
   
   var linkList = persons.persons.map( (p, i) => {
     return(
