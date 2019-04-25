@@ -14,8 +14,8 @@ class App extends Component {
           <hr />
 
           <Route exact path="/" component={Home} />
-          <Route path="/user" component={User} />     
-          <Route path="/admin" component={Admin} />
+          <Route path="/user/swapi" component={User} />     
+          <Route path="/admin/swapi" component={Admin} />
     
         </div>
       </Router>    
@@ -30,10 +30,10 @@ function Header(){
     <NavLink exact to="/">Home</NavLink>
   </li>
   <li>
-    <NavLink to="/user">User</NavLink>
+    <NavLink to="/user/swapi">User</NavLink>
   </li>
   <li>
-    <NavLink to="/admin">Admin</NavLink>
+    <NavLink to="/admin/swapi">Admin</NavLink>
   </li>
 </ul>)
 }
