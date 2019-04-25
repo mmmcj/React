@@ -16,6 +16,7 @@ class App extends Component {
   getUsers = async () => {
     try {
       const persons = await facade.getApi();
+
       this.setState({ persons });
     } catch (err) {
       if (err.status) {

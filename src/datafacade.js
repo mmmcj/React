@@ -1,4 +1,4 @@
-const url = "https://wulffn.com/jwtbackend/api/";
+const url = "https://madsjustesen.dk/jwtbackend/api/";
 
 function makeOptions(method, body, token) {
     var opts = {
@@ -45,4 +45,4 @@ class DataFacade {
 
 }
 
-export default DataFacade;
+export default new DataFacade();

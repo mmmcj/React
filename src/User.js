@@ -7,11 +7,11 @@ const User = ({ match, persons }) => {
 
   console.log(persons);
   
-  var linkList = persons.map( (person, i) => {
+  var linkList = persons.persons.map( (p, i) => {
     return(
       <li key={i}>
         <Link to={`${match.url}/${i}`}>
-          {person.name}
+          {p.name}
         </Link>
       </li>
       )
