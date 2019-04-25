@@ -1,4 +1,4 @@
-const url = "https://madsjustesen.dk/jwtbackend/api/";
+const url = "https://wulffn.com/jwtbackend/api/";
 
 function makeOptions(method, body, token) {
     var opts = {
@@ -31,7 +31,7 @@ const parseJwt = (token) => {
 
 class DataFacade {
     getToken = (credentials) => {
-        const options = makeOptions("POST", credentials);
+        const options = makeOptions("POST", credentials, "");
         return fetch(url + "login", options).then(handleHttpErrors);
     }
 
@@ -41,10 +41,7 @@ class DataFacade {
         return fetch(url + "info/" + role, options).then(handleHttpErrors);
     }
 
-    getApi = () => {
-        const options = makeOptions("GET");
-        return fetch(url + "info/apis").then(handleHttpErrors);
-    }
+    getApi = () => fetch(url + "info/apis").then(handleHttpErrors);
 
 }
 

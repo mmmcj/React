@@ -1,45 +1,73 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { HashRouter as Router, Route, NavLink } from "react-router-dom";
 import './App.css';
 import User from './User';
 import Admin from './Admin';
+import facade from "./datafacade";
+
+
 
 class App extends Component {
-  render(){
+  constructor(props) {
+    super(props);
+    this.state = { persons: [] };
+  }
+
+  getUsers = async () => {
+    try {
+      const persons = await facade.getApi();
+      this.setState({ persons });
+    } catch (err) {
+      if (err.status) {
+        const fullError = await err.fullError;
+        this.setState({ error: fullError.msg });
+      }
+      else { this.setState({ error: "Server is Down" }); }
+
+    }
+  }
+
+
+
+  componentDidMount() {
+    this.getUsers();
+  }
+
+  render() {
     return (
-        <Router>
+      <Router>
         <div className="App">
-          <Header/>  
+          <Header />
 
           <hr />
 
           <Route exact path="/" component={Home} />
-          <Route path="/user/swapi" component={User} />     
+          <Route path="/user/swapi" component={User} data={this.state.persons} />
           <Route path="/admin/swapi" component={Admin} />
-    
+
         </div>
-      </Router>    
+      </Router>
     );
   }
 }
 
-function Header(){
-  return( 
-  <ul className="header">
-  <li>
-    <NavLink exact to="/">Home</NavLink>
-  </li>
-  <li>
-    <NavLink to="/user/swapi">User</NavLink>
-  </li>
-  <li>
-    <NavLink to="/admin/swapi">Admin</NavLink>
-  </li>
-</ul>)
+function Header() {
+  return (
+    <ul className="header">
+      <li>
+        <NavLink exact to="/">Home</NavLink>
+      </li>
+      <li>
+        <NavLink to="/user/swapi">User</NavLink>
+      </li>
+      <li>
+        <NavLink to="/admin/swapi">Admin</NavLink>
+      </li>
+    </ul>)
 }
 
 
-function Home(){
+function Home() {
   return (
     <div>
       <h2>Home</h2>

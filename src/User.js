@@ -3,10 +3,9 @@ import { Link, Route } from 'react-router-dom';
 import Person from './Person';
 import df from './datafacade';
 
+const User = ({ match, persons }) => {
 
-const persons = [df.getApi()];
-
-const User = ({ match }) => {
+  console.log(persons);
   
   var linkList = persons.map( (person, i) => {
     return(
