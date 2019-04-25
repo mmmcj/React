@@ -14,7 +14,7 @@ class App extends Component {
           <hr />
 
           <Route exact path="/" component={Home} />
-          <Route path="/user/swapi" component={User(match)} />     
+          <Route path="/user/swapi" component={User} />     
           <Route path="/admin/swapi" component={Admin} />
     
         </div>
