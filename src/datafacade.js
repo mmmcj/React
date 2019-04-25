@@ -32,4 +32,11 @@ class DataFacade {
         return fetch(url + "info/" + role).then(handleHttpErrors);
     }
 
+    getApi = () => {
+        const options = makeOptions("GET", token);
+        return fetch(url + "info/apis").then(handleHttpErrors);
+    }
+
 }
+
+export default DataFacade;
