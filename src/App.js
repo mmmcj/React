@@ -43,7 +43,10 @@ class App extends Component {
           <hr />
 
           <Route exact path="/" component={Home} />
-          <Route path="/user/swapi" component={User} data={this.state.persons} />
+
+          <Route path={`/user/swapi`} render={(props) => {
+            return (<User {...props} persons={this.state.persons} />)
+          }} />
           <Route path="/admin/swapi" component={Admin} />
 
         </div>
