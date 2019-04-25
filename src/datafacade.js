@@ -1,10 +1,11 @@
 const url = "http://localhost:8084/jwtbackend/api/";
 
-function makeOptions(method, body) {
+function makeOptions(method, body, token) {
     var opts = {
         method: method,
         headers: {
-            "Content-type": "application/json"
+            "Content-type": "application/json",
+            "x-access-token": token
         }
     }
     if (body) {
@@ -21,9 +22,14 @@ function handleHttpErrors(res) {
 }
 
 class DataFacade {
-    login = (credentials) => {
+    getToken = (credentials) => {
         const options = makeOptions("POST", credentials);
-        return fetch(URL + "login").then(handleHttpErrors);
+        return fetch(url + "login").then(handleHttpErrors);
+    }
+
+    login = (token, role) => {
+        const options = makeOptions("GET", token);
+        return fetch(url + "info/" + role).then(handleHttpErrors);
     }
 
 }
