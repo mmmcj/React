@@ -37,7 +37,7 @@ class DataFacade {
 
     login = (token) => {
         const role = parseJwt(token).roles;
-        const options = makeOptions("GET", token);
+        const options = makeOptions("GET", "", token);
         return fetch(url + "info/" + role, options).then(handleHttpErrors);
     }
 
