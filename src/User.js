@@ -43,11 +43,11 @@ import { ReactComponent } from '*.svg';
             }}>
 
               <h3> Persons of intrest</h3>
-              <ul style={{ listStyleType: 'none', padding: 0, fontSize: '15px' }}> {linkList} </ul>
+              <ul style={{ listStyleType: 'none', padding: 0, fontSize: '15px' }}> {lis} </ul>
             </div>
           </div>
 
-          <Route path={`${match.url}/:personIndex`} render={(props) => <Person data={persons} {...props} />} />
+          <Route path={`${match.url}/:personIndex`} render={(props) => <Person data={this.state.persons} {...props} />} />
           <Route exact path={match.url}
             render={() => (
               <div style={{ textAlign: 'center' }}>Choose a Character</div>
