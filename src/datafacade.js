@@ -21,15 +21,24 @@ function handleHttpErrors(res) {
     return res.json();
 }
 
+const parseJwt = (token) => {
+    try {
+      console.log(JSON.parse(atob(token.split('.')[1])).roles);
+    } catch (e) {
+      return null;
+    }
+  };
+
 class DataFacade {
     getToken = (credentials) => {
         const options = makeOptions("POST", credentials);
-        return fetch(url + "login").then(handleHttpErrors);
+        return fetch(url + "login", options).then(handleHttpErrors);
     }
 
-    login = (token, role) => {
+    login = (token) => {
+        const role = parseJwt(token).roles;
         const options = makeOptions("GET", token);
-        return fetch(url + "info/" + role).then(handleHttpErrors);
+        return fetch(url + "info/" + role, options).then(handleHttpErrors);
     }
 
     getApi = () => {
