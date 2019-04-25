@@ -1,21 +1,26 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { HashRouter as Router, Route, NavLink } from "react-router-dom";
 import './App.css';
+import User from './User';
+import Admin from './Admin';
 
-function App() {
-  return (
-      <Router>
-      <div className="App">
-        <Header/>  
+class App extends Component {
+  render(){
+    return (
+        <Router>
+        <div className="App">
+          <Header/>  
 
-        <hr />
+          <hr />
 
-        <Route exact path="/" component={Home} />
-        <Route path="/user" component={User} />
-        <Route path="/admin" component={Admin} />
-      </div>
-    </Router>    
-  );
+          <Route exact path="/" component={Home} />
+          <Route path="/user" component={User} />     
+          <Route path="/admin" component={Admin} />
+    
+        </div>
+      </Router>    
+    );
+  }
 }
 
 function Header(){
@@ -33,21 +38,6 @@ function Header(){
 </ul>)
 }
 
-function User(){
-  return (
-    <div>
-      <h2>User</h2>
-    </div>
-  );
-}
-
-function Admin(){
-  return (
-    <div>
-      <h2>Admin</h2>
-    </div>
-  );
-}
 
 function Home(){
   return (
@@ -56,4 +46,6 @@ function Home(){
     </div>
   );
 }
+
+
 export default App;
