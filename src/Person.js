@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const Person = ({match,data}) => {
-  var person = data.find((p,i) => i === Number(match.params.i));
+  var person = data[match.params.personIndex];
   var personData;
 
   if(person)

@@ -32,7 +32,7 @@ const User = ({ match, persons }) => {
       </div>
     </div>
     
-    <Route path={`${match.url}/:personIndex`} render={ (props) => <Person data= {persons} {...props} />}/>
+    <Route path={`${match.url}/:personIndex`} render={ (props) => <Person data= {persons.persons} {...props} />}/>
     <Route exact path={match.url} 
       render={() => (
         <div style={{ textAlign:'center'}}>Please select a product.</div>

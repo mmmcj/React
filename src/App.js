@@ -44,10 +44,12 @@ class App extends Component {
 
           <Route exact path="/" component={Home} />
 
-          <Route path={`/user/swapi`} render={(props) => {
-            return (<User {...props} persons={this.state.persons} />)
+          <Route path={`/user/swapi`} render= {(props) => {
+            return (<User {...props} persons= {this.state.persons} />)
           }} />
-          <Route path="/admin/swapi" component={Admin} />
+          <Route path={`/admin/swapi`} render= {(props) => {
+            return (<Admin {...props} persons= {this.state.persons} />)
+          }} />
 
         </div>
       </Router>
