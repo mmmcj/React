@@ -1,4 +1,4 @@
-const url = "http://localhost:8084/jwtbackend/api/";
+const url = "https://www.wulffn.com/jwtbackend/api/";
 
 function makeOptions(method, body, token) {
     var opts = {
@@ -23,7 +23,7 @@ function handleHttpErrors(res) {
 
 const parseJwt = (token) => {
     try {
-      console.log(JSON.parse(atob(token.split('.')[1])).roles);
+      return JSON.parse(atob(token.split('.')[1])).roles;
     } catch (e) {
       return null;
     }
@@ -31,12 +31,13 @@ const parseJwt = (token) => {
 
 class DataFacade {
     getToken = (credentials) => {
-        const options = makeOptions("POST", credentials, "");
+        const options = makeOptions("POST", credentials, ""); 
         return fetch(url + "login", options).then(handleHttpErrors);
     }
 
     login = (token) => {
-        const role = parseJwt(token).roles;
+        const role = parseJwt(token);
+        console.log(role + "msg")
         const options = makeOptions("GET", "", token);
         return fetch(url + "info/" + role, options).then(handleHttpErrors);
     }

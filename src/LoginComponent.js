@@ -30,15 +30,16 @@ export default class Login extends Component {
     const getUsername = this.state.username;
     const getPassword = this.state.password;
     try {
-        const token = await facade.getToken({username: getUsername, password: getPassword});
-        const msg = await facade.login(token)
+      
+        const user = await facade.getToken({username: getUsername, password: getPassword});
+        
+        const msg = await facade.login(user.token)
+        
         return msg;
     } catch (e) {
         alert(e.message);
     }
   }
-
-  
 
     render() {
       return (
