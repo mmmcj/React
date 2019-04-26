@@ -27,9 +27,10 @@ export default class Login extends Component {
 
   handleSubmit = async event => {
     event.preventDefault();
-    const credentials = [this.state.username, this.state.password];
+    const getUsername = this.state.username;
+    const getPassword = this.state.password;
     try {
-        const token = await facade.getToken(JSON.stringify(credentials));
+        const token = await facade.getToken({username: getUsername, password: getPassword});
         const msg = await facade.login(token)
         return msg;
     } catch (e) {
