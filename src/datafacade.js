@@ -1,4 +1,4 @@
-const url = "https://madsjustesen.dk/jwtbackend/api/";
+const url = "http://localhost:8080/jwtbackend/api/";
 
 function makeOptions(method, body, token) {
     var opts = {

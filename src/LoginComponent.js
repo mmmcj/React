@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
-import "./Login.css";
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
+
+
 import facade from "./datafacade";
 
 export default class Login extends Component {
@@ -35,37 +37,35 @@ export default class Login extends Component {
     }
   }
 
-  render() {
-    return (
-      <div className="Login">
-        <form onSubmit={this.handleSubmit}>
-          <FormGroup controlId="username" bsSize="large">
-            <ControlLabel>Username</ControlLabel>
-            <FormControl
-              autoFocus
-              type="text"
-              value={this.state.username}
-              onChange={this.handleChange}
-            />
-          </FormGroup>
-          <FormGroup controlId="password" bsSize="large">
-            <ControlLabel>Password</ControlLabel>
-            <FormControl
-              value={this.state.password}
-              onChange={this.handleChange}
-              type="password"
-            />
-          </FormGroup>
-          <Button
-            block
-            bsSize="large"
-            disabled={!this.validateForm()}
-            type="submit"
-          >
-            Login
-          </Button>
-        </form>
-      </div>
-    );
+    render() {
+      return (
+        <div className="Login">
+          <Form onSubmit={this.handleSubmit}>
+            <Form.Group controlId="username" bsSize="large">
+              <Form.Control
+                autoFocus
+                type="text"
+                value={this.state.username}
+                onChange={this.handleChange}
+              />
+            </Form.Group>
+            <Form.Group controlId="password" bsSize="large">
+              <Form.Control
+                value={this.state.password}
+                onChange={this.handleChange}
+                type="password"
+              />
+            </Form.Group>
+            <Button
+              block
+              bsSize="large"
+              disabled={!this.validateForm()}
+              type="submit"
+            >
+              Login
+            </Button>
+          </Form>
+        </div>
+      );
   }
 }

@@ -4,6 +4,7 @@ import './App.css';
 import User from './User';
 import Admin from './Admin';
 import facade from "./datafacade";
+import Login from "./LoginComponent";
 
 
 
@@ -76,7 +77,8 @@ function Header() {
 function Home() {
   return (
     <div>
-      <h2>Home</h2>
+      {<h2>Home</h2>}
+      <Login/>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, Route } from 'react-router-dom';
 import Person from './Person';
-import df from './datafacade';
+
 
 const User = ({ match, persons }) => {
 
