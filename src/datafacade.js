@@ -1,11 +1,11 @@
-const url = "https://www.wulffn.com/jwtbackend/api/";
+const url = "http://localhost:3000/events";
 
-function makeOptions(method, body, token) {
+function makeOptions(method, body) {
     var opts = {
         method: method,
         headers: {
             "Content-type": "application/json",
-            "x-access-token": token
+            //"x-access-token": token
         }
     }
     if (body) {
@@ -30,19 +30,21 @@ const parseJwt = (token) => {
   };
 
 class DataFacade {
-    getToken = (credentials) => {
-        const options = makeOptions("POST", credentials, ""); 
-        return fetch(url + "login", options).then(handleHttpErrors);
-    }
+    // getToken = (credentials) => {
+    //     const options = makeOptions("POST", credentials, ""); 
+    //     return fetch(url + "login", options).then(handleHttpErrors);
+    // }
 
-    login = (token) => {
-        const role = parseJwt(token);
-        console.log(role + "msg")
-        const options = makeOptions("GET", "", token);
-        return fetch(url + "info/" + role, options).then(handleHttpErrors);
-    }
+    // login = (token) => {
+    //     const role = parseJwt(token);
+    //     console.log(role + "msg")
+    //     const options = makeOptions("GET", "", token);
+    //     return fetch(url + "info/" + role, options).then(handleHttpErrors);
+    // }
 
-    getApi = () => fetch(url + "info/apis").then(handleHttpErrors);
+    // getApi = () => fetch(url + "info/apis").then(handleHttpErrors);
+
+    getEvents = () => fetch(url).then(handleHttpErrors);
 
 }
 

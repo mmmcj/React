@@ -3,20 +3,17 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
 
-import facade from "./datafacade";
-
-export default class Login extends Component {
+export default class search extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      username: "",
-      password: ""
+      searchText: ""
     };
   }
 
   validateForm() {
-    return this.state.username.length > 0 && this.state.password.length > 0;
+    return this.state.searchText.length > 0;
   }
 
   handleChange = event => {
@@ -27,15 +24,9 @@ export default class Login extends Component {
 
   handleSubmit = async event => {
     event.preventDefault();
-    const getUsername = this.state.username;
-    const getPassword = this.state.password;
+    const getSearchText = this.state.searchText;
     try {
-      
-        const user = await facade.getToken({username: getUsername, password: getPassword});
-        
-        const msg = await facade.login(user.token)
-        
-        return msg;
+        console.log(getSearchText);
     } catch (e) {
         alert(e.message);
     }
@@ -43,32 +34,30 @@ export default class Login extends Component {
 
     render() {
       return (
-        <div className="Login">
+        <React.Fragment>
+        <div className="container">
+          <div className="search">
           <Form onSubmit={this.handleSubmit}>
-            <Form.Group controlId="username">
+            <Form.Group controlId="searchText">
               <Form.Control
                 autoFocus
                 type="text"
-                value={this.state.username}
+                value={this.state.searchText}
                 onChange={this.handleChange}
-              />
-            </Form.Group>
-            <Form.Group controlId="password">
-              <Form.Control
-                value={this.state.password}
-                onChange={this.handleChange}
-                type="password"
               />
             </Form.Group>
             <Button
               block
+              
               disabled={!this.validateForm()}
               type="submit"
             >
-              Login
+              search
             </Button>
           </Form>
         </div>
+        </div>        
+        </React.Fragment>
       );
   }
 }
