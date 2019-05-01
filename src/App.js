@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import B from 'react-bootstrap';
 import { HashRouter as Router, Route, NavLink, Link } from "react-router-dom";
 import './App.css';
 import User from './User';
@@ -80,7 +81,9 @@ class App extends Component {
 
 function Header() {
   return (
-    <ul className="header">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div className="container">
+    <ul className="navbar-nav mr-auto">
       <li>
         <NavLink exact to="/">Home</NavLink>
       </li>
@@ -93,7 +96,10 @@ function Header() {
       <li>
         <NavLink to="/events">Events</NavLink>
       </li>
-    </ul>)
+    </ul>  
+    </div>    
+    </nav>
+    )
 }
 
 
