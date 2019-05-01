@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
 import { HashRouter as Router, Route, NavLink, Link } from "react-router-dom";
 import './App.css';
-import User from './User';
-import Admin from './Admin';
+//import User from './User';
+//import Admin from './Admin';
 import facade from "./datafacade";
-import Login from "./LoginComponent";
+//import Login from "./LoginComponent";
 import Search from "./search";
 
 function EventSingle({match, events}){
-  //console.log(match.params.id);
-  // const id = match.params.id;
-  // console.log(id);
-  // const event = events.find(item => item.id === id)
-  // console.log(event)
+  const id = match.params.id;
 
-  const event = events.find(e => e.id == match.params.id)
+  //Evt tag en samtale med lærer i morgen i forhold til findIndex vs Find?
+  const event = events.find(e => e.id == id)
 
   console.log(event);
+  
 
   return (
-    <h2>Hej</h2>
+    <React.Fragment>
+      <h2>{event.title}!</h2>
+    </React.Fragment>
   );
 }
 
