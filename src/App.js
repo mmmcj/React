@@ -9,7 +9,7 @@ import Search from "./search";
 
 function EventSingle({match, events}){
   const id = match.params.id;
-  const single_event = events.filter(e=>e.id == id)[0]
+  const single_event = events.filter(e=>e.id == id)[0];
   console.log(single_event);
   
   return (
