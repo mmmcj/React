@@ -8,18 +8,18 @@ import Login from "./LoginComponent";
 import Search from "./search";
 
 function EventSingle({match, events}){
-  //console.log(match.params.id);
-  // const id = match.params.id;
-  // console.log(id);
-  // const event = events.find(item => item.id === id)
-  // console.log(event)
-
-  const event = events.find(e => e.id == match.params.id)
-
-  console.log(event);
-
+  const id = match.params.id;
+  const single_event = events.filter(e=>e.id == id)[0]
+  console.log(single_event);
+  
   return (
-    <h2>Hej</h2>
+    <React.Fragment>
+      <div className="container">
+        <h2>{single_event.title}</h2>
+        <p>{single_event.price}Kr,-</p>
+        <p>{single_event.long_desc}</p>
+      </div>
+    </React.Fragment>
   );
 }
 
