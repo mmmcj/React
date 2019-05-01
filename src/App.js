@@ -10,15 +10,14 @@ import Search from "./search";
 function EventSingle({match, events}){
   const id = match.params.id;
 
-  //Evt tag en samtale med lærer i morgen i forhold til findIndex vs Find?
-  const event = events.find(e => e.id == id)
-
-  console.log(event);
-  
+  const single_event = events.filter(e => e.id == id)[0];
+  console.table(single_event);
 
   return (
     <React.Fragment>
-      <h2>{event.title}!</h2>
+      <div className="container">
+        <h2>{single_event.title}</h2>
+      </div>
     </React.Fragment>
   );
 }
