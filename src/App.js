@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import B from 'react-bootstrap';
 import { HashRouter as Router, Route, NavLink, Link } from "react-router-dom";
 import './App.css';
 //import User from './User';
@@ -10,13 +11,16 @@ import Search from "./search";
 function EventSingle({match, events}){
   const id = match.params.id;
 
-  const single_event = events.filter(e => e.id == id)[0];
+  const single_event = events.filter(e=>e.id == id)[0];
   console.table(single_event);
-
+  
   return (
     <React.Fragment>
       <div className="container">
         <h2>{single_event.title}</h2>
+        <p>{single_event.price}Kr,-</p>
+        <p>{single_event.long_desc}</p>
+        <p>TILFØJ dvs ting her under.</p>
       </div>
     </React.Fragment>
   );
@@ -79,7 +83,9 @@ class App extends Component {
 
 function Header() {
   return (
-    <ul className="header">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div className="container">
+    <ul className="navbar-nav mr-auto">
       <li>
         <NavLink exact to="/">Home</NavLink>
       </li>
@@ -92,7 +98,10 @@ function Header() {
       <li>
         <NavLink to="/events">Events</NavLink>
       </li>
-    </ul>)
+    </ul>  
+    </div>    
+    </nav>
+    )
 }
 
 
