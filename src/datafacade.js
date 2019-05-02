@@ -1,4 +1,5 @@
 const url = "http://localhost:3000/events";
+const url_filter = "http://localhost:4001/events";
 
 function makeOptions(method, body) {
     var opts = {
@@ -36,7 +37,7 @@ class DataFacade {
     getEventsBySearch = (search) => {
         const searchUrl = url + "/" + search;
         console.log(searchUrl);
-        return fetch(url).then(handleHttpErrors);
+        return fetch(url_filter).then(handleHttpErrors);
     }
 
     // getToken = (credentials) => {

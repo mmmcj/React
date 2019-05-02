@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import facade from './datafacade';
-import Events from "./Events";
 
 
 export default class Search extends Component {
@@ -25,9 +24,11 @@ export default class Search extends Component {
   }
 
   handleSubmit = async event => {
-    const events = await facade.getEventsBySearch(this.state.searchText);
-    this.setState({events});
     event.preventDefault();
+    const events = await facade.getEventsBySearch(this.state.searchText);
+    this.props.setEvents(events)
+    this.setState({searchText: ""});
+    
   }
 
   render() {

@@ -24,37 +24,45 @@ class App extends Component {
   }
 
   setEvents = (events) => {
-    this.setState({events})
+    this.setState({ events })
   }
 
   render() {
     return (
-      <Router>
-        <div className="App">
-          <Header />
+      <React.Fragment>
+        <Router>
+          <div className="App">
+            <Header />
 
-          <hr />
+            <hr />
 
-          <Route path={`/`} render={(props) => {
-            return (<Search {...props} setEvents={this.setEvents} />)
-          }} />
+            <Route path={`/`} render={(props) => {
+              return (
+                <div>
+                  <Search {...props} setEvents={this.setEvents} />
+                  <Events events={this.state.events} />
+                </div>)
+            }} />
 
-          {/* <Route path={`/user/swapi`} render= {(props) => {
+            {/* <Route path={`/user/swapi`} render= {(props) => {
             return (<User {...props} persons= {this.state.persons} />)
           }} />
           <Route path={`/admin/swapi`} render= {(props) => {
             return (<Admin {...props} persons= {this.state.persons} />)
           }} /> */}
 
-          <Route path={`/evenSingle/:id`} render={(props) => {
-            return (<EventSingle {...props} events={this.state.events} />)
-          }} />
+            <Route path={`/evenSingle/:id`} render={(props) => {
+              return (<EventSingle {...props} events={this.state.events} />)
+            }} />
 
-          <Route path="/events" render={(props) => {
-            return (<Events {...props} events={this.state.events} />)
-          }} />
-        </div>
-      </Router>
+            <Route path="/events" render={(props) => {
+              return (<Events {...props} events={this.state.events} />)
+            }} />
+          </div>
+
+        </Router>
+
+      </React.Fragment>
     );
   }
 }

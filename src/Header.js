@@ -14,10 +14,10 @@ function Header() {
                 </li>
                 <li>
                 <NavLink to="/admin/swapi">Admin</NavLink>
-                </li>*/}
+                </li>
                 <li>
                 <NavLink to="/events">Events</NavLink>
-                </li>
+                </li>*/}
             </ul>  
         </div>    
       </nav>
