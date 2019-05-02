@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
 import { HashRouter as Router, Route } from "react-router-dom";
-//import './css/App.css';
-//import User from './User';
-//import Admin from './Admin';
-import facade from "./datafacade";
-//import Login from "./LoginComponent";
-import Search from "./search";
-import EventSingle from "./EventSingle";
-import Events from "./Events";
-import Header from "./Header";
+
+import facade from "./Datafacade";
+import Search from "./Search/search";
+import EventSingle from "./EventSingle/EventSingle";
+import Events from "./Event/Events";
+import Header from "./Header/Header";
 
 
 
