@@ -21,15 +21,24 @@ function handleHttpErrors(res) {
     return res.json();
 }
 
-const parseJwt = (token) => {
-    try {
-      return JSON.parse(atob(token.split('.')[1])).roles;
-    } catch (e) {
-      return null;
-    }
-  };
+// const parseJwt = (token) => {
+//     try {
+//       return JSON.parse(atob(token.split('.')[1])).roles;
+//     } catch (e) {
+//       return null;
+//     }
+//   };
 
 class DataFacade {
+
+    getEvents = () => fetch(url).then(handleHttpErrors);
+
+    getEventsBySearch = (search) => {
+        const searchUrl = url + "/" + search;
+        console.log(searchUrl);
+        return fetch(url).then(handleHttpErrors);
+    }
+
     // getToken = (credentials) => {
     //     const options = makeOptions("POST", credentials, ""); 
     //     return fetch(url + "login", options).then(handleHttpErrors);
@@ -42,9 +51,7 @@ class DataFacade {
     //     return fetch(url + "info/" + role, options).then(handleHttpErrors);
     // }
 
-    // getApi = () => fetch(url + "info/apis").then(handleHttpErrors);
 
-    getEvents = () => fetch(url).then(handleHttpErrors);
 
 }
 

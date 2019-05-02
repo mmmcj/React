@@ -1,9 +1,11 @@
 import React, { Component } from "react";
-import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Button'
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import facade from './datafacade';
+import Events from "./Events";
 
 
-export default class search extends Component {
+export default class Search extends Component {
   constructor(props) {
     super(props);
 
@@ -23,41 +25,30 @@ export default class search extends Component {
   }
 
   handleSubmit = async event => {
+    const events = await facade.getEventsBySearch(this.state.searchText);
+    this.setState({events});
     event.preventDefault();
-    const getSearchText = this.state.searchText;
-    try {
-        console.log(getSearchText);
-    } catch (e) {
-        alert(e.message);
-    }
   }
 
-    render() {
-      return (
-        <React.Fragment>
+  render() {
+    return (
+      <React.Fragment>
         <div className="container">
           <div className="search">
-          <Form onSubmit={this.handleSubmit}>
-            <Form.Group controlId="searchText">
-              <Form.Control
-                autoFocus
-                type="text"
-                value={this.state.searchText}
-                onChange={this.handleChange}
-              />
-            </Form.Group>
-            <Button
-              block
-              
-              disabled={!this.validateForm()}
-              type="submit"
-            >
-              search
-            </Button>
-          </Form>
+            <Form onSubmit={this.handleSubmit}>
+              <Form.Group controlId="searchText">
+                <Form.Control
+                  autoFocus
+                  type="text"
+                  value={this.state.searchText}
+                  onChange={this.handleChange}
+                />
+              </Form.Group>
+              <Button block disabled={!this.validateForm()} type="submit">Search</Button>
+            </Form>
+          </div>
         </div>
-        </div>        
-        </React.Fragment>
-      );
+      </React.Fragment>
+    );
   }
 }

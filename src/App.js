@@ -23,6 +23,10 @@ class App extends Component {
     this.setState({ events });
   }
 
+  setEvents = (events) => {
+    this.setState({events})
+  }
+
   render() {
     return (
       <Router>
@@ -31,7 +35,9 @@ class App extends Component {
 
           <hr />
 
-          <Route exact path="/" component={Search} />
+          <Route path={`/`} render={(props) => {
+            return (<Search {...props} setEvents={this.setEvents} />)
+          }} />
 
           {/* <Route path={`/user/swapi`} render= {(props) => {
             return (<User {...props} persons= {this.state.persons} />)
