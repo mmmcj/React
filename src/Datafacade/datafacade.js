@@ -1,5 +1,6 @@
-const url = "http://localhost:3000/events";
-const url_filter = "http://localhost:4001/events";
+// const url = "http://localhost:3000/events";
+// const url_filter = "http://localhost:4001/events";
+const URL = "https://mddenner.dk/Semesterprojekt/api/show/events/"
 
 function makeOptions(method, body) {
     var opts = {
@@ -32,11 +33,14 @@ function handleHttpErrors(res) {
 
 class DataFacade {
 
-    getEvents = () => fetch(url).then(handleHttpErrors);
+    getEvents = () => {
+        console.log(URL)
+        return fetch(URL).then(handleHttpErrors);
+    }
 
-    getEventsBySearch = (search) => {
-        const searchUrl = url + "/" + search;
-        return fetch(url_filter).then(handleHttpErrors);
+    getEventsBySearch = (keyword) => {
+        console.log(URL + keyword)
+        return fetch(URL + keyword).then(handleHttpErrors);
     }
 
     // getToken = (credentials) => {

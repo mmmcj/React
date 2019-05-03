@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 export default function SearchInput(props) {
 
   const [keyword, setKeyword] = useState('');
@@ -15,13 +16,14 @@ export default function SearchInput(props) {
 
   return (
     <div>
+
       <input
         type="text"
         onChange={handleKeywordInput}
         value={keyword}
-        placeholder="Keyword"
+        placeholder="Search"
       />
-      <button onClick={handleSubmit}> Keyword </button>
+      <button onClick={handleSubmit}> Search </button>
     </div>
   );
 };
