@@ -40,7 +40,7 @@ class App extends Component {
               return (
                 <div>
                   <Search setEvents={this.setEvents} setKeyword={this.setKeyword} keyword={this.state.keyword} />
-                  <Events {...props} keyword={this.state.keyword} events={this.state.events} setEvents={this.setEvents}/>
+                  <Events {...props} keyword={this.state.keyword}/>
                 </div>)
             }} />
 
