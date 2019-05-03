@@ -36,7 +36,6 @@ class DataFacade {
 
     getEventsBySearch = (search) => {
         const searchUrl = url + "/" + search;
-        console.log(searchUrl);
         return fetch(url_filter).then(handleHttpErrors);
     }
 

@@ -1,0 +1,87 @@
+{
+  "events": [
+    {
+      "id": 0,
+      "title": "RUNE KLAN LIVE 2020 - HÅBEFULD",
+      "short_desc": "Rune Klan byder alle nysgerrige på en tur i sit magiske univers - med noget på hjerte! Senest han ramte de danske scener med showet Barnløs, blev han hyldet som ’modig, original, fantastisk, genial, rørende og overraskende’.",
+      "long_desc": "Rune har en efterhånden velkendt og unik showform, der med effektfuld snilde og charme blander humor, eftertænksomhed og tryl i verdensklasse. Som altid er det sparsomt med oplysninger om selve showet, men han lover, at ambitionerne ikke er sænket siden sidst. Livet er sådan set godt ved Rune Klan, men derfor kan man sagtens have noget på hjerte og ekstra overskud at dele ud af fra scenen. Med afsæt i personlige oplevelser og verden omkring os, vil den eftertænksomme gøgler, med vanlig selvironisk distance, give sit bud på at være HÅBEFULD anno 2020. Rune Klans nye show HÅBEFULD får premiere på Det Kongelige Teater 30. januar 2020. Herefter tager showet på turné landet over. SE FULD TURNÈPLAN OG MERE INFO PÅ: www.runeklan.dk https://www.facebook.com/runeklan/ Se mere, og følg med på runeklan.dk",
+      "price": 129,
+      "start": "05-06-2019 19.00 ETC",
+      "end": "05-06-2019 21.00 ETC",
+      "image": null,
+      "location": {
+        "venue": "Royal Arena",
+        "city": "Copenhagen"
+      },
+      "country": {
+        "country": "Denmark",
+        "country_code": "DK"
+      },
+      "genre": {
+        "genre": "Comedy"
+      }
+    },
+    {
+      "id": 1,
+      "title": "Pittsburgh Steelers vs. Tampa Bay Buccaneers",
+      "short_desc": "Section 120 Rows BB-HH are designated as the Family Section. No Alcohol willbe permitted in this area.",
+      "long_desc": "Please Note: Ticket limits will be strictly enforced.",
+      "price": 1049,
+      "start": "09-08-2019 19.00 ETC",
+      "end": "09-08-2019 21.00 ETC",
+      "image": "https://media.ticketmaster.com/en-us/dbimages/312766a.jpg",
+      "location": {
+        "venue": "Heinz Field",
+        "city": "Pittsburgh, PA"
+      },
+      "country": {
+        "country": "United States of America",
+        "country_code": "USA"
+      },
+      "genre": {
+        "genre": "Sports"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Roskilde Festival",
+      "short_desc": "Roskilde Festival is more than music, art, food and parties. Much more.",
+      "long_desc": "It's also a week-long celebration of togetherness and community — that's something we want to encourage all year, through donations and cooperation with organisations working for a more equal society.",
+      "price": 2299,
+      "start": "03-06-2019 19.00 ETC",
+      "end": "06-06-2019 21.00 ETC",
+      "image": "https://s1.ticketm.net/img/tat/dam/a/1ae/5177f8f8-4d7d-4087-8a9b-8d222969d1ae_888741_CUSTOM.jpg",
+      "location": {
+        "venue": "Festival Site in Roskilde",
+        "city": "Roskilde"
+      },
+      "country": {
+        "country": "Denmark",
+        "country_code": "DK"
+      },
+      "genre": {
+        "genre": "Festival"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Khalid - Free Spirit Tour",
+      "short_desc": "Coming Soon",
+      "long_desc": "Coming Soon",
+      "price": 749,
+      "start": "13-09-2019 19.30 ETC",
+      "end": "13-09-2019 22.30 ETC",
+      "image": "https://s1.ticketm.net/img/tat/dam/a/65c/f3452c51-bfe6-4a91-8e52-6fa3698fe65c_1021331_CUSTOM.jpg",
+      "location": {
+        "venue": "Oslo Spektrum",
+        "city": "Oslo"
+      },
+      "country": {
+        "country": "Norway",
+        "country_code": "NO"
+      },
+      "genre": {
+        "genre": "Music"
+      }
+    }  ]
+}

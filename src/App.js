@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { HashRouter as Router, Route } from "react-router-dom";
 
-import facade from "./Datafacade";
-import Search from "./Search/search";
-import EventSingle from "./EventSingle/EventSingle";
+import Facade from "./Datafacade/Datafacade";
+import Search from "./Search/Search";
+import EventSingle from "./Event/EventSingle";
 import Events from "./Event/Events";
 import Header from "./Header/Header";
 
@@ -12,16 +12,19 @@ import Header from "./Header/Header";
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { events: [] };
+    this.state = { 
+      events: [],
+      keyword: ''
+    };
   }
 
-  componentDidMount = async () => {
-    const events = await facade.getEvents();
+
+  setEvents = (events) => {
     this.setState({ events });
   }
 
-  setEvents = (events) => {
-    this.setState({ events })
+  setKeyword = (keyword) => {
+    this.setState({keyword});
   }
 
   render() {
@@ -36,8 +39,8 @@ class App extends Component {
             <Route path={`/`} render={(props) => {
               return (
                 <div>
-                  <Search {...props} setEvents={this.setEvents} />
-                  <Events events={this.state.events} />
+                  <Search setEvents={this.setEvents} setKeyword={this.setKeyword} keyword={this.state.keyword} />
+                  <Events {...props} keyword={this.state.keyword} events={this.state.events} setEvents={this.setEvents}/>
                 </div>)
             }} />
 
@@ -52,9 +55,7 @@ class App extends Component {
               return (<EventSingle {...props} events={this.state.events} />)
             }} />
 
-            <Route path="/events" render={(props) => {
-              return (<Events {...props} events={this.state.events} />)
-            }} />
+            
           </div>
 
         </Router>
