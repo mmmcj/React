@@ -31,22 +31,31 @@ class Events extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      events: []
+      events: [],
     };
   }
 
-  
+
 
   componentDidMount = async () => {
-    var events = []
-    if (this.props.keyword === '') {
-      events = await Facade.getEvents();
-      this.setState({events})
-    } else {
-      events = await Facade.getEventsBySearch(this.props.keyword);
-      this.setState({events})
+    const events = await Facade.getEvents();
+    this.setState({ events })
+  }
+
+
+  componentDidUpdate = async (prevProps) => {
+    if (this.props.keyword !== prevProps.keyword) {
+      var events = []
+      if (this.props.keyword === '') {
+        events = await Facade.getEvents();
+        this.setState({ events })
+      } else {
+        events = await Facade.getEventsBySearch(this.props.keyword);
+        this.setState({ events })
+      }
     }
   }
+
 
   render() {
     return (
