@@ -40,6 +40,7 @@ class Events extends React.Component {
   componentDidMount = async () => {
     const events = await Facade.getEvents();
     this.setState({ events })
+    this.props.setEvents(events)
   }
 
 
@@ -49,9 +50,11 @@ class Events extends React.Component {
       if (this.props.keyword === '') {
         events = await Facade.getEvents();
         this.setState({ events })
+        this.props.setEvents(events)
       } else {
         events = await Facade.getEventsBySearch(this.props.keyword);
         this.setState({ events })
+        this.props.setEvents(events)
       }
     }
   }
@@ -62,7 +65,7 @@ class Events extends React.Component {
       <React.Fragment>
         <div className="container">
           <ul>
-            {this.state.events.map(e => <li key={e.id}><Link to={`/evenSingle/${e.id}`}>{e.title}</Link></li>)}
+            {this.state.events.map(e => <li key={e.id}><Link to={`/eventSingle/${e.id}`}>{e.title}</Link></li>)}
           </ul>
         </div>
       </React.Fragment>

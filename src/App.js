@@ -13,12 +13,17 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      keyword: ''
+      keyword: '',
+      events: []
     };
   }
 
   setKeyword = (keyword) => {
     this.setState({keyword});
+  }
+
+  setEvents = (events) => {
+    this.setState({events})
   }
 
   render() {
@@ -34,7 +39,7 @@ class App extends Component {
               return (
                 <div>
                   <Search setKeyword={this.setKeyword} />
-                  <Events {...props} keyword={this.state.keyword} setKeyword={this.setKeyword}/>
+                  <Events {...props} keyword={this.state.keyword} setKeyword={this.setKeyword} setEvents={this.setEvents}/>
                 </div>)
             }} />
 
@@ -45,7 +50,7 @@ class App extends Component {
             return (<Admin {...props} persons= {this.state.persons} />)
           }} /> */}
 
-            <Route path={`/evenSingle/:id`} render={(props) => {
+            <Route path={`/eventSingle/:id`} render={(props) => {
               return (<EventSingle {...props} events={this.state.events} />)
             }} />
 
