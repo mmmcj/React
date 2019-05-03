@@ -39,15 +39,13 @@ class App extends Component {
               return (
                 <div>
                   <Search setKeyword={this.setKeyword} />
-                  <Events keyword={this.state.keyword} setKeyword={this.setKeyword} setEvents={this.setEvents}/>
                 </div>)
             }} />
 
             <Route path={`/events`} render={(props) => {
               return (
                 <div>
-                  <Search setKeyword={this.setKeyword} />
-                  <Events {...props} keyword={this.state.keyword} setKeyword={this.setKeyword} setEvents={this.setEvents}/>
+                  <Events keyword={this.state.keyword} setKeyword={this.setKeyword} setEvents={this.setEvents}/>
                 </div>)
             }} />
 

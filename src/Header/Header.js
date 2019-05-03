@@ -9,6 +9,9 @@ function Header() {
                 <li>
                 <NavLink exact to="/">Home</NavLink>
                 </li>
+                <li>
+                <NavLink exact to="/events">Events</NavLink>
+                </li>
                 {/* <li>
                 <NavLink to="/user/swapi">User</NavLink>
                 </li>
