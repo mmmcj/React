@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Button, InputGroup, FormControl } from 'react-bootstrap'
 
 
 export default function SearchInput(props) {
@@ -15,15 +16,22 @@ export default function SearchInput(props) {
   };
 
   return (
-    <div>
-
-      <input
-        type="text"
-        onChange={handleKeywordInput}
-        value={keyword}
-        placeholder="Search"
-      />
-      <button onClick={handleSubmit}> Search </button>
+    <div className="container">
+      <div className="row">
+        <div className="col-md-4">
+          <InputGroup className="mb-3">
+            <FormControl
+              type="text"
+              onChange={handleKeywordInput}
+              value={keyword}
+              placeholder="Search"
+            />
+            <InputGroup.Append>
+              <Button onClick={handleSubmit}>Search</Button>
+            </InputGroup.Append>
+          </InputGroup>
+        </div>
+      </div>
     </div>
   );
 };
