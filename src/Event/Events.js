@@ -70,11 +70,12 @@ class Events extends React.Component {
               <div className="col-md-4">
                 <div key={e.id}>
                   <Card style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src="https://s1.ticketm.net/img/tat/dam/a/7de/3dc54130-12c4-49f4-812b-beaffa86b7de_990021_CUSTOM.jpg" />
+                    <Card.Img variant="top" src={e.defaultImg} />
                     <Card.Body>
                       <Card.Title>{e.title} - {e.price} DKK</Card.Title>
                       <Card.Text>
-                        {e.city.city} - {e.country.country}
+                        <p>{e.shortDesc}</p>
+                        <p>{e.city.city} - {e.country.country}</p>
                       </Card.Text>
                       <Link to={`/eventSingle/${e.id}`}><Button>Go to event</Button></Link>
                     </Card.Body>
