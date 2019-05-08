@@ -24,9 +24,9 @@ function EventSingle({ match, events }) {
                   <h6>Long Description</h6>
                   <p>{singleEvent.longDesc}</p>
                   <h6>Location:</h6>
-                  <Geolocated.Body>
-
-                  </Geolocated.Body>
+                  <Geolocated>
+                    
+                  </Geolocated>
                 </Col>
                 <Col md={4}>
                   <Image src={singleEvent.defaultImg} />
