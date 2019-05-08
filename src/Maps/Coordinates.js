@@ -1,5 +1,5 @@
 import React from 'react';
-import {geolocated, geoPropTypes} from 'react-geolocated';
+import { geolocated, geoPropTypes } from 'react-geolocated';
 
 class Maps extends React.Component {
     constructor(props) {
@@ -14,7 +14,7 @@ class Maps extends React.Component {
                 : this.props.coords
                     ? <table>
                         <tbody>
-                            
+
                             <tr><td>latitude</td><td>{this.props.coords.latitude}</td></tr>
                             <tr><td>longitude</td><td>{this.props.coords.longitude}</td></tr>
                         </tbody>
