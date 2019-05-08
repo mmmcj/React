@@ -26,7 +26,6 @@ function EventSingle({ match, events }) {
                   <p>{singleEvent.longDesc}</p>
                   <h6>Location:</h6>
                   <Geolocated/>
-                  <GeoMaps/>
 
                 </Col>
                 <Col md={4}>
