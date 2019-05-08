@@ -1,7 +1,6 @@
 import React from 'react';
 import { Card, Container, Row, Col, Image} from 'react-bootstrap'
 import Geolocated from '../Maps/Maps';
-import GeoMaps from '../Maps/googlemapsreact';
 
 function EventSingle({ match, events }) {
   const id = match.params.id;
