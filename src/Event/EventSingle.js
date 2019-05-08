@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, Container, Row, Col, Image} from 'react-bootstrap'
 import Geolocated from '../Maps/Maps';
+import GeoMaps from '../Maps/googlemapsreact';
 
 function EventSingle({ match, events }) {
   const id = match.params.id;
@@ -24,9 +25,9 @@ function EventSingle({ match, events }) {
                   <h6>Long Description</h6>
                   <p>{singleEvent.longDesc}</p>
                   <h6>Location:</h6>
-                  <Geolocated>
-                    
-                  </Geolocated>
+                  <Geolocated/>
+                  <GeoMaps/>
+
                 </Col>
                 <Col md={4}>
                   <Image src={singleEvent.defaultImg} />
