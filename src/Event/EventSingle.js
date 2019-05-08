@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Container, Row, Col, Image} from 'react-bootstrap'
+import Geolocated from '../Maps/Maps';
 
 function EventSingle({ match, events }) {
   const id = match.params.id;
@@ -22,14 +23,16 @@ function EventSingle({ match, events }) {
                   <p>{singleEvent.shortDesc}</p>
                   <h6>Long Description</h6>
                   <p>{singleEvent.longDesc}</p>
+                  <h6>Location:</h6>
+                  <Geolocated.Body>
+
+                  </Geolocated.Body>
                 </Col>
                 <Col md={4}>
                   <Image src={singleEvent.defaultImg} />
                 </Col>
               </Row>
             </Container>;
-
-
           </Card.Text>
         </Card.Body>
       </Card>
