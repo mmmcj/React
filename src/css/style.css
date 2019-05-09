@@ -39,7 +39,8 @@
         margin: 0;
         display: block;
         padding: 5px 10px;
-        white-space: nowrap
+        white-space: nowrap;
+        color: #000000;
     }
     .main-menu>ul>li span>a {
         color: #fff;
@@ -52,7 +53,7 @@
         opacity: .7
     }
     header.sticky .main-menu>ul>li span>a {
-        color: #444
+        color: #000;
     }
     header.sticky .main-menu>ul>li span:hover>a {
         opacity: 1;
@@ -774,7 +775,8 @@ header.header.sticky .logo_normal {
 
 footer ul li a,
 header.header.sticky {
-    -moz-transition: all .3s ease-in-out
+    -moz-transition: all .3s ease-in-out;
+    color:#000;
 }
 
 .btn_map_in:hover,
