@@ -57,7 +57,6 @@ class App extends Component {
               return (<EventSingle {...props} events={this.state.events} />)
             }} />
 
-            <Route component={NotFound} /> 
         </Router>
         <Footer />
       </React.Fragment>
