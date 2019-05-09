@@ -800,7 +800,7 @@ header {
 }
 header.header.sec-header {
     border-bottom: 1px solid #ededed;
-    background-color: #fff;
+    background-color: #000;
     padding: 15px;
     color: black;
 }
@@ -813,6 +813,7 @@ header.header.sec-header .logo_normal {
 header.header.sec-header .logo_sticky{
     display: block;
 }
+
 header.header.sec-header .main-menu>ul>li span>a {
     color: #000;
     padding: 0 8px 15px;

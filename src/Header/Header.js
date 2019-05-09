@@ -6,13 +6,15 @@ import { Navbar, Nav } from 'react-bootstrap'
 function Header() {
   return (
     <React.Fragment>
-        <header className="header home-header mm-slideout">
+        <header className="header sticky sec-header mm-slideout">
         <div id="preloader" style={{display: 'none'}}>
             <div data-loader="circle-side" style={{display: 'none'}}></div>
         </div>
         <div id="logo">
             <h1>
-                <Link exact to="/">Tickmaster</Link>
+                <a href="index.html">
+                Your logo
+                </a>
             </h1>
         </div>
         <a href="#menu" className="btn_mobile">
@@ -31,7 +33,7 @@ function Header() {
                 </li>
                 <li>
                     <span>
-                        <Link exact to="/events">Events</Link>
+                    <Link exact to="/events">Events</Link>
                     </span>
                 </li>
             </ul>
