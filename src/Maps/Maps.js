@@ -39,9 +39,7 @@ class Maps extends React.Component {
                         </div>
                         : <div>Getting the location data&hellip; </div>
         );
-
     }
-
 }
 
 Maps.propTypes = { ...Maps.propTypes, ...geoPropTypes };
