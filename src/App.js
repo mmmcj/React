@@ -37,7 +37,8 @@ class App extends Component {
       <React.Fragment>
         <Router>
             <Header />
-            <Route path={`/`} render={(props) => {
+            
+                <Route path={`/`} render={(props) => {
               return (<Search setKeyword={this.setKeyword} />)
             }} />
 
@@ -55,7 +56,6 @@ class App extends Component {
             <Route path={`/eventSingle/:id`} render={(props) => {
               return (<EventSingle {...props} events={this.state.events} />)
             }} />
-
         </Router>
         <Footer />
       </React.Fragment>

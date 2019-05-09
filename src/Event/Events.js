@@ -19,7 +19,7 @@ import { Card, Button } from 'react-bootstrap'
 
 //   return (
 //     <React.Fragment>
-//       <div className="container">
+//       <div classNameName="container">
 //         <ul>
 //           {lis}
 //         </ul>
@@ -64,10 +64,48 @@ class Events extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className="container">
-          <div className="row">
+          <div className="container" style={{marginTop: '25px'}}>
+              <div className="row">
+                {this.state.events.map(e => (
+                    <div className="item" key={e.id}>
+                      <div className="box_grid">
+                        <figure>
+                          <a href="tour-detail.html">
+                            <img src={e.defaultImg} className="img-fluid" alt="" width="800" height="533" />
+                            <div className="read_more">
+                              <span>Read more</span>
+                            </div>
+                          </a>
+                          <small>Historic - AA</small>
+                        </figure>
+                        <div className="wrapper">
+                          <h3>
+                            <a href="tour-detail.html">{e.title}</a>
+                          </h3>
+                          <p>{e.shortDesc}</p>
+                          <span className="price">From
+                                        <strong>$25</strong> /per person</span>
+                        </div>
+                        <ul>
+                          <li>1h 30min</li>
+                          <li>
+                            <div className="score">
+                              <span>Good
+                                                <em>350 Reviews</em>
+                              </span>
+                              <strong>7.0</strong>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                ))}
+              </div>
+            </div>
+          {/* 
+          <div classNameName="row">
             {this.state.events.map(e => (
-              <div className="col-md-4">
+              <div classNameName="col-md-4">
                 <div key={e.id}>
                   <Card style={{ width: '18rem' }}>
                     <Card.Img variant="top" src={e.defaultImg} />
@@ -85,8 +123,7 @@ class Events extends React.Component {
             ))}
 
 
-          </div>
-        </div>
+          </div> */}
 
       </React.Fragment>
     )

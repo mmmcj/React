@@ -7,7 +7,7 @@ function Header() {
     <React.Fragment>
       {/* <Navbar bg="dark" variant="dark">
         <Navbar.Brand href="#home">Tickets</Navbar.Brand>
-        <Nav className="mr-auto">
+        <Nav classNameName="mr-auto">
           <Nav.Link><Link exact to="/">Home</Link></Nav.Link>
           <Nav.Link><Link exact to="/events">Events</Link></Nav.Link>
         </Nav>
@@ -37,17 +37,12 @@ function Header() {
                 <ul>
                     <li>
                         <span>
-                            <a href="index.html">Home</a>
+                            <Link exact to="/">Home</Link>
                         </span>
                     </li>
                     <li>
                         <span>
-                            <a href="#0">Concerts</a>
-                        </span>
-                    </li>
-                    <li>
-                        <span>
-                            <a href="#0">Sports</a>
+                            <Link exact to="/events">Events</Link>
                         </span>
                     </li>
                 </ul>
@@ -60,9 +55,9 @@ function Header() {
   )
 }
 
-// <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-// <div className="container">
-//   <ul className="navbar-nav mr-auto">
+// <nav classNameName="navbar navbar-expand-lg navbar-dark bg-dark">
+// <div classNameName="container">
+//   <ul classNameName="navbar-nav mr-auto">
 //     <li>
 //       <NavLink exact to="/">Home</NavLink>
 //     </li>

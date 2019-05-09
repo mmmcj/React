@@ -4098,7 +4098,7 @@ img.mfp-img {
     text-align: center
 }
 
-.owl-theme .owl-nav [class*=owl-] {
+.owl-theme .owl-nav [className*=owl-] {
     color: #FFF;
     font-size: 14px;
     margin: 5px;
@@ -4109,7 +4109,7 @@ img.mfp-img {
     border-radius: 3px
 }
 
-.owl-theme .owl-nav [class*=owl-]:hover {
+.owl-theme .owl-nav [className*=owl-]:hover {
     background: #869791;
     color: #FFF;
     text-decoration: none
@@ -5408,82 +5408,82 @@ html.mm-opening .mm-menu.mm-fx-menu-fade {
     transform: translate3d(0, 0, 0)
 }
 
-.mm-menu[class*=mm-fx-listitems-] .mm-listview>li {
+.mm-menu[className*=mm-fx-listitems-] .mm-listview>li {
     -webkit-transition: none .4s ease;
     transition: none .4s ease
 }
 
-.mm-menu[class*=mm-fx-listitems-] .mm-listview>li:nth-child(1) {
+.mm-menu[className*=mm-fx-listitems-] .mm-listview>li:nth-child(1) {
     -webkit-transition-delay: 50ms;
     transition-delay: 50ms
 }
 
-.mm-menu[class*=mm-fx-listitems-] .mm-listview>li:nth-child(2) {
+.mm-menu[className*=mm-fx-listitems-] .mm-listview>li:nth-child(2) {
     -webkit-transition-delay: .1s;
     transition-delay: .1s
 }
 
-.mm-menu[class*=mm-fx-listitems-] .mm-listview>li:nth-child(3) {
+.mm-menu[className*=mm-fx-listitems-] .mm-listview>li:nth-child(3) {
     -webkit-transition-delay: 150ms;
     transition-delay: 150ms
 }
 
-.mm-menu[class*=mm-fx-listitems-] .mm-listview>li:nth-child(4) {
+.mm-menu[className*=mm-fx-listitems-] .mm-listview>li:nth-child(4) {
     -webkit-transition-delay: .2s;
     transition-delay: .2s
 }
 
-.mm-menu[class*=mm-fx-listitems-] .mm-listview>li:nth-child(5) {
+.mm-menu[className*=mm-fx-listitems-] .mm-listview>li:nth-child(5) {
     -webkit-transition-delay: 250ms;
     transition-delay: 250ms
 }
 
-.mm-menu[class*=mm-fx-listitems-] .mm-listview>li:nth-child(6) {
+.mm-menu[className*=mm-fx-listitems-] .mm-listview>li:nth-child(6) {
     -webkit-transition-delay: .3s;
     transition-delay: .3s
 }
 
-.mm-menu[class*=mm-fx-listitems-] .mm-listview>li:nth-child(7) {
+.mm-menu[className*=mm-fx-listitems-] .mm-listview>li:nth-child(7) {
     -webkit-transition-delay: 350ms;
     transition-delay: 350ms
 }
 
-.mm-menu[class*=mm-fx-listitems-] .mm-listview>li:nth-child(8) {
+.mm-menu[className*=mm-fx-listitems-] .mm-listview>li:nth-child(8) {
     -webkit-transition-delay: .4s;
     transition-delay: .4s
 }
 
-.mm-menu[class*=mm-fx-listitems-] .mm-listview>li:nth-child(9) {
+.mm-menu[className*=mm-fx-listitems-] .mm-listview>li:nth-child(9) {
     -webkit-transition-delay: 450ms;
     transition-delay: 450ms
 }
 
-.mm-menu[class*=mm-fx-listitems-] .mm-listview>li:nth-child(10) {
+.mm-menu[className*=mm-fx-listitems-] .mm-listview>li:nth-child(10) {
     -webkit-transition-delay: .5s;
     transition-delay: .5s
 }
 
-.mm-menu[class*=mm-fx-listitems-] .mm-listview>li:nth-child(11) {
+.mm-menu[className*=mm-fx-listitems-] .mm-listview>li:nth-child(11) {
     -webkit-transition-delay: 550ms;
     transition-delay: 550ms
 }
 
-.mm-menu[class*=mm-fx-listitems-] .mm-listview>li:nth-child(12) {
+.mm-menu[className*=mm-fx-listitems-] .mm-listview>li:nth-child(12) {
     -webkit-transition-delay: .6s;
     transition-delay: .6s
 }
 
-.mm-menu[class*=mm-fx-listitems-] .mm-listview>li:nth-child(13) {
+.mm-menu[className*=mm-fx-listitems-] .mm-listview>li:nth-child(13) {
     -webkit-transition-delay: 650ms;
     transition-delay: 650ms
 }
 
-.mm-menu[class*=mm-fx-listitems-] .mm-listview>li:nth-child(14) {
+.mm-menu[className*=mm-fx-listitems-] .mm-listview>li:nth-child(14) {
     -webkit-transition-delay: .7s;
     transition-delay: .7s
 }
 
-.mm-menu[class*=mm-fx-listitems-] .mm-listview>li:nth-child(15) {
+.mm-menu[className*=mm-fx-listitems-] .mm-listview>li:nth-child(15) {
     -webkit-transition-delay: 750ms;
     transition-delay: 750ms
 }
@@ -5688,11 +5688,11 @@ html.mm-iconbar .mm-slideout {
     white-space: normal
 }
 
-.mm-menu.mm-opened[class*=mm-pagedim]~#mm-blocker {
+.mm-menu.mm-opened[className*=mm-pagedim]~#mm-blocker {
     opacity: 0
 }
 
-html.mm-opening .mm-menu.mm-opened[class*=mm-pagedim]~#mm-blocker {
+html.mm-opening .mm-menu.mm-opened[className*=mm-pagedim]~#mm-blocker {
     opacity: .3;
     -webkit-transition: opacity .4s ease .4s;
     transition: opacity .4s ease .4s
@@ -6917,7 +6917,7 @@ html.mm-dropdown.mm-opened:not(.mm-opening) .mm-menu.mm-dropdown {
     padding: 0 40px
 }
 
-.mm-navbar[class*=mm-navbar-content-]>* {
+.mm-navbar[className*=mm-navbar-content-]>* {
     box-sizing: border-box;
     display: block;
     float: left
@@ -7172,11 +7172,11 @@ html.mm-dropdown.mm-opened:not(.mm-opening) .mm-menu.mm-dropdown {
     margin-left: 90px
 }
 
-.mm-menu.mm-rtl .mm-panel[class*=mm-iconpanel-] {
+.mm-menu.mm-rtl .mm-panel[className*=mm-iconpanel-] {
     left: 0
 }
 
-.mm-menu.mm-rtl .mm-panel[class*=mm-iconpanel-].mm-subopened {
+.mm-menu.mm-rtl .mm-panel[className*=mm-iconpanel-].mm-subopened {
     -webkit-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
     transform: translate(0, 0);
@@ -7930,10 +7930,10 @@ html.mm-opening .mm-menu.mm-offcanvas.mm-next {
     border-radius: 4px
 }
 
-[class*=" pe-7s-"],
-[class*=" ti-"],
-[class^=pe-7s-],
-[class^=ti-],
+[className*=" pe-7s-"],
+[className*=" ti-"],
+[className^=pe-7s-],
+[className^=ti-],
 [data-icon]:before {
     speak: none;
     font-weight: 400;
@@ -7973,8 +7973,8 @@ html.mm-opening .mm-menu.mm-offcanvas.mm-next {
     font-style: normal
 }
 
-[class*=" icon-"]:before,
-[class^=icon-]:before {
+[className*=" icon-"]:before,
+[className^=icon-]:before {
     font-family: fontello;
     font-style: normal;
     font-weight: 400;
@@ -15799,8 +15799,8 @@ html.mm-opening .mm-menu.mm-offcanvas.mm-next {
     font-style: normal
 }
 
-[class*=" pe-7s-"],
-[class^=pe-7s-] {
+[className*=" pe-7s-"],
+[className^=pe-7s-] {
     display: inline-block;
     font-family: Pe-icon-7-stroke;
     font-style: normal;
@@ -18484,8 +18484,8 @@ html.mm-opening .mm-menu.mm-offcanvas.mm-next {
     font-style: normal
 }
 
-[class*=" ti-"],
-[class^=ti-] {
+[className*=" ti-"],
+[className^=ti-] {
     font-family: themify;
     font-style: normal;
     -moz-osx-font-smoothing: grayscale

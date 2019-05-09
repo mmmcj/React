@@ -17,9 +17,9 @@ export default function SearchInput(props) {
 
   return (
     <div className="container cTop">
-      <div className="row">
-        <div className="col-md-4">
-          <InputGroup className="mb-3">
+      <div classNameName="row">
+        <div classNameName="col-md-4">
+          <InputGroup classNameName="mb-3">
             <FormControl
               type="text"
               onChange={handleKeywordInput}
@@ -32,9 +32,6 @@ export default function SearchInput(props) {
           </InputGroup>
         </div>
       </div>
-      <h2>Helhelrhrlehler</h2>
-      <p>hejhejhe</p>
-      <p>Hejhje</p>
     </div>
   );
 };
