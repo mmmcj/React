@@ -32,6 +32,9 @@ export default function SearchInput(props) {
           </InputGroup>
         </div>
       </div>
+      <h2>Helhelrhrlehler</h2>
+      <p>hejhejhe</p>
+      <p>Hejhje</p>
     </div>
   );
 };

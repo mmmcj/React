@@ -5,14 +5,55 @@ import { Navbar, Nav } from 'react-bootstrap'
 function Header() {
   return (
     <React.Fragment>
-      <Navbar bg="dark" variant="dark">
+      {/* <Navbar bg="dark" variant="dark">
         <Navbar.Brand href="#home">Tickets</Navbar.Brand>
         <Nav className="mr-auto">
           <Nav.Link><Link exact to="/">Home</Link></Nav.Link>
           <Nav.Link><Link exact to="/events">Events</Link></Nav.Link>
         </Nav>
-        </Navbar>
+        </Navbar> */}
       
+
+
+        <header className="header sticky sec-header border-none mm-slideout">
+            <div id="preloader" style={{display: 'none'}}>
+                <div data-loader="circle-side" style={{display: 'none'}}></div>
+            </div>
+            <div id="logo">
+                <h1>
+                    <a href="index.html">
+                        TickMaster
+                    </a>
+                </h1>
+            </div>
+            <a href="#menu" className="btn_mobile">
+                <div className="hamburger hamburger--spin" id="hamburger">
+                    <div className="hamburger-box">
+                        <div className="hamburger-inner"></div>
+                    </div>
+                </div>
+            </a>
+            <nav id="menu" className="main-menu">
+                <ul>
+                    <li>
+                        <span>
+                            <a href="index.html">Home</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <a href="#0">Concerts</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <a href="#0">Sports</a>
+                        </span>
+                    </li>
+                </ul>
+            </nav>
+    </header>
+
     </React.Fragment>
 
 

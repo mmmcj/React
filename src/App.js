@@ -7,46 +7,42 @@ import EventSingle from "./Event/EventSingle";
 import Events from "./Event/Events";
 import Header from "./Header/Header";
 
+import Footer from './Footer/Footer';
+
+//css
+import './css/custom.css';
+import './css/style.css';
+import './css/vendors.css';
 
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { 
+    this.state = {
       keyword: '',
       events: []
     };
   }
 
   setKeyword = (keyword) => {
-    this.setState({keyword});
+    this.setState({ keyword });
   }
 
   setEvents = (events) => {
-    this.setState({events})
+    this.setState({ events })
   }
 
   render() {
     return (
       <React.Fragment>
         <Router>
-          <div className="App">
             <Header />
-
-            <hr />
-
             <Route path={`/`} render={(props) => {
-              return (
-                <div>
-                  <Search setKeyword={this.setKeyword} />
-                </div>)
+              return (<Search setKeyword={this.setKeyword} />)
             }} />
 
             <Route path={`/events`} render={(props) => {
-              return (
-                <div>
-                  <Events keyword={this.state.keyword} setKeyword={this.setKeyword} setEvents={this.setEvents}/>
-                </div>)
+              return (<Events keyword={this.state.keyword} setKeyword={this.setKeyword} setEvents={this.setEvents} />)
             }} />
 
             {/* <Route path={`/user/swapi`} render= {(props) => {
@@ -60,11 +56,8 @@ class App extends Component {
               return (<EventSingle {...props} events={this.state.events} />)
             }} />
 
-            
-          </div>
-
         </Router>
-
+        <Footer />
       </React.Fragment>
     );
   }
