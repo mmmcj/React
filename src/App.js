@@ -38,7 +38,7 @@ class App extends Component {
         <Router>
             <Header />
             
-                <Route path={`/`} render={(props) => {
+                <Route exact path={`/`} render={(props) => {
               return (<Search setKeyword={this.setKeyword} />)
             }} />
 
