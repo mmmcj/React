@@ -12,9 +12,7 @@ function Header() {
         </div>
         <div id="logo">
             <h1>
-                <a href="index.html">
-                Your logo
-                </a>
+                <Link exact to="/">TickMaster</Link>
             </h1>
         </div>
         <a href="#menu" className="btn_mobile">
