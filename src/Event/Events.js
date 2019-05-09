@@ -39,7 +39,7 @@ class Events extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className="container" style={{marginTop: '85px'}}>
+        <div className="container mm" style={{marginTop: '85px'}}>
             <div className="row">
               {this.state.events.map(e => (
                 <div className="item" key={e.id}>

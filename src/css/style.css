@@ -7573,3 +7573,8 @@ a.social_bt.google:before {
         margin: 15px 0;
     }
 }
+
+.mm {
+    margin-top: 85px;
+    min-height: 550px;
+}
