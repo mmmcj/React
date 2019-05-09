@@ -8,7 +8,7 @@ function EventSingle({ match, events }) {
 
   return (
     <React.Fragment>
-      <div className="bg_color_1" >
+      <div className="bg_color_1" style={{marginTop: '85px'}}>
         <div className="container event-content" >
             <div className="row" >
                 <div className="col-lg-7">
