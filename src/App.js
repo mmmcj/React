@@ -6,7 +6,6 @@ import Search from "./Search/Search";
 import EventSingle from "./Event/EventSingle";
 import Events from "./Event/Events";
 import Header from "./Header/Header";
-import NotFound from './Notfound/Notfound';
 import Footer from './Footer/Footer';
 
 //css
