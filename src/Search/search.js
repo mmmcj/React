@@ -16,7 +16,7 @@ export default function SearchInput(props) {
   };
 
   return (
-    <div className="container">
+    <div className="container cTop">
       <div className="row">
         <div className="col-md-4">
           <InputGroup className="mb-3">

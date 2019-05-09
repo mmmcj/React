@@ -783,6 +783,11 @@ a.btn_map_in:hover {
     color: #fff
 }
 
+.cTop {
+    margin-top: 100px;
+    min-height: 580px;
+}
+
 header {
     position: fixed;
     left: 0;
