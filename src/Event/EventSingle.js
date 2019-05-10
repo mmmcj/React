@@ -1,11 +1,34 @@
 import React from 'react';
-import { Card, Container, Row, Col, Image} from 'react-bootstrap'
+import { Card, Container, Row, Col, Image} from 'react-bootstrap';
 import Geolocated from '../Maps/Maps';
+import Facade from '../Datafacade/Datafacade';
+
+
+
+
+
+
+navigator.geolocation.getCurrentPosition(componentDidMount)
+
+componentDidMount = async (pos) => {
+  var crd = pos.coords;
+  const events = await Facade.getAirPortAndEventByDistance(
+    this.props.event.startDate,
+    crd.lattitude,
+    crd.longitude,
+    this.props.event.city.lattitude,
+    this.props.event.city.longitude
+    );
+  this.setState({ events })
+  this.props.setEvents(events)
+}
+
+
 
 
 function EventSingle({ match, events }) {
   const id = match.params.id;
-
+  
   const singleEvent = events.filter(e => e.id == id)[0];
 
   return (

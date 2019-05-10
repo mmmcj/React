@@ -10,7 +10,9 @@ const AnyReactComponent = ({ text }) => <div>{text}</div>;
 class Maps extends React.Component {
   constructor(props) {
     super(props)
-
+    this.state = {
+      coords: [],
+    };
   }
 
   static defaultProps = {
@@ -26,7 +28,9 @@ class Maps extends React.Component {
     const events = await Facade.getAirPortAndEventByDistance(PropParams);
     this.setState({ events })
     this.props.setEvents(events)
+    navigator.geolocation.getCurrentPosition(ourFunction)
   }
+
 
 
 
