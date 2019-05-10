@@ -57,7 +57,7 @@ class Events extends React.Component {
                       <h3>
                         <Link to={`/eventSingle/${e.id}`}>{e.title}</Link>
                       </h3>
-                      <p>{e.shortDesc}</p>
+                      <p>{e.shortDesc.substring(0, 130)}</p>
                       <span className="price">From <strong>{e.price}</strong> DKK,-</span>
                     </div>
                     <ul>
