@@ -35,9 +35,9 @@ class RandomEvents extends Component {
                       </figure>
                       <div className="wrapper">
                         <h3>
-                          <Link to={`/eventSingle/${e.id}`}>{e.title}</Link>
+                          <Link to={`/eventSingle/${e.id}`}>{e.title.substring(0, 12)}</Link>
                         </h3>
-                        <p>{e.shortDesc.substring(0, 130)}</p>
+                        <p>{e.shortDesc.substring(0, 120)}</p>
                         <span className="price">From <strong>{e.price}</strong> DKK,-</span>
                       </div>
                       <ul>
@@ -57,6 +57,6 @@ class RandomEvents extends Component {
         </React.Fragment>
       )
     }
-  }
+}
 
 export default RandomEvents;

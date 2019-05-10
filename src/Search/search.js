@@ -42,15 +42,14 @@ export default function SearchInput(props) {
             <p>Expolore top rated tours, hotels and restaurants around the world</p>
             <form>
               <div className="row no-gutters custom-search-input-2">
-                <div className="col-lg-6">
+                <div className="col-lg-8">
                   <div className="form-group">
                     <input className="form-control" type="text" placeholder="Event..." />
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-2">
                   <div class="form-group">
-                    <input class="form-control" type="text" name="dates" placeholder="When.." />
-<DatePicker/>
+                    <DatePicker/>
                   </div>
                 </div>
                 <div class="col-lg-2">

@@ -799,8 +799,7 @@ header {
     border-bottom: 1px solid rgba(255, 255, 255, 0)
 }
 header.header.sec-header {
-    border-bottom: 1px solid #ededed;
-    background-color: #000;
+    background-color: #fff;
     padding: 15px;
     color: black;
 }
@@ -815,11 +814,10 @@ header.header.sec-header .logo_sticky{
 }
 
 header.header.sec-header .main-menu>ul>li span>a {
-    color: #000;
+    color: #004dda;
     padding: 0 8px 15px;
-    font-size: 14px;
-    font-size: .875rem;
-    font-weight: 500;
+    font-size: 17px;
+    font-weight: bold;
 }
 @media (max-width:767px) {
     header {
@@ -833,8 +831,7 @@ header.header.sticky {
     -webkit-transition: all .3s ease-in-out;
     -ms-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
-    border-bottom: 1px solid #ededed;
-    background-color: #fff;
+    background-color: rgba(97, 97, 97, 0.180);
     padding: 15px
 }
 
