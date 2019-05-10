@@ -1,6 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, Component } from "react";
+import { HashRouter as Router, Route, NavLink, Link } from "react-router-dom";
 import { Button, InputGroup, FormControl } from 'react-bootstrap'
+import Facade from '../Datafacade/Datafacade';
 
+import EventsRandom from '../Event/EventsRandom';
 
 export default function SearchInput(props) {
 
@@ -68,14 +71,15 @@ export default function SearchInput(props) {
       </div>
 
       <div className="container">
-        <div class="main_title_2">
+        <div className="main_title_2">
           <span>
             <em></em>
           </span>
           <h2>Our Popular Tours</h2>
-          <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
+          <p>Cum doctus civibus efficiantur imperdiet deterruisset.</p>
         </div>
       </div>
+      <EventsRandom />
     </React.Fragment>
   );
 };

@@ -1,3 +1,5 @@
+//import { url } from "inspector";
+
 // const url = "http://localhost:3000/events";
 // const url_filter = "http://localhost:4001/events";
 const URL = "https://mddenner.dk/Semesterprojekt/api/show/events/"
@@ -41,6 +43,12 @@ class DataFacade {
     getEventsBySearch = (keyword) => {
         console.log(URL + keyword)
         return fetch(URL + keyword).then(handleHttpErrors);
+    }
+
+    getRandom = (numberOfEvents) => {
+        const value = "random/";
+        console.log(URL + value + numberOfEvents)
+        return fetch(URL + value + numberOfEvents).then(handleHttpErrors);
     }
 
     // getToken = (credentials) => {
