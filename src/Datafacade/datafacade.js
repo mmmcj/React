@@ -47,7 +47,7 @@ class DataFacade {
     getAirPortAndEventByDistance = (Date, Lattitude, longtitude, eventLattitude, eventLongtitude) => {
         console.log(URLFlights + Date + slash + Lattitude + slash +  longtitude + slash + eventLattitude + slash + eventLongtitude)
         return fetch(URLFlights + Date + slash + Lattitude + slash +  longtitude + slash + eventLattitude + slash + eventLongtitude)
-            .then(handleHttpErrors);
+            .then(handleHttpErrors); 
     }
 
     // getToken = (credentials) => {
