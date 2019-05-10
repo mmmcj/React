@@ -19,8 +19,7 @@ class App extends Component {
     super(props);
     this.state = {
       keyword: '',
-      events: [],
-      date: "05/15/2019"
+      events: []
     };
   }
 
@@ -32,10 +31,6 @@ class App extends Component {
     this.setState({ events })
   }
 
-  setDate = (date) => {
-    this.setDate({date})
-  }
-
 
   render() {
     return (
@@ -44,7 +39,7 @@ class App extends Component {
             <Header />
             
                 <Route exact path={`/`} render={(props) => {
-              return (<Search setKeyword={this.setKeyword} setDate={this.setDate} date={this.state.date} />)
+              return (<Search setKeyword={this.setKeyword} />)
             }} />
 
             <Route path={`/events`} render={(props) => {

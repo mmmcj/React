@@ -1,6 +1,5 @@
 import React, { useState, Component } from "react";
-import DatePicker from "react-datepicker";
-
+import DatePicker from './Date';
 import EventsRandom from '../Event/EventsRandom';
 
 export default function SearchInput(props) {
@@ -15,10 +14,6 @@ export default function SearchInput(props) {
   const handleKeywordInput = e => {
     setKeyword(e.target.value);
   };
-
-  const handleChange = e => {
-    this.props.setDate(this.props.date)
-  }
 
   return (
     // <div className="container cTop">
@@ -55,10 +50,7 @@ export default function SearchInput(props) {
                 <div class="col-lg-4">
                   <div class="form-group">
                     <input class="form-control" type="text" name="dates" placeholder="When.." />
-                    <DatePicker
-                      selected={this.props.date}
-                      onChange={this.handleChange}
-                    />
+<DatePicker/>
                   </div>
                 </div>
                 <div class="col-lg-2">
