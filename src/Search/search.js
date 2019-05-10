@@ -1,7 +1,5 @@
 import React, { useState, Component } from "react";
-import { HashRouter as Router, Route, NavLink, Link } from "react-router-dom";
-import { Button, InputGroup, FormControl } from 'react-bootstrap'
-import Facade from '../Datafacade/Datafacade';
+import DatePicker from "react-datepicker";
 
 import EventsRandom from '../Event/EventsRandom';
 
@@ -17,6 +15,10 @@ export default function SearchInput(props) {
   const handleKeywordInput = e => {
     setKeyword(e.target.value);
   };
+
+  const handleChange = e => {
+    this.props.setDate(this.props.date)
+  }
 
   return (
     // <div className="container cTop">
@@ -53,6 +55,10 @@ export default function SearchInput(props) {
                 <div class="col-lg-4">
                   <div class="form-group">
                     <input class="form-control" type="text" name="dates" placeholder="When.." />
+                    <DatePicker
+                      selected={this.props.date}
+                      onChange={this.handleChange}
+                    />
                   </div>
                 </div>
                 <div class="col-lg-2">
