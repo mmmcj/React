@@ -36,26 +36,21 @@ class App extends Component {
     return (
       <React.Fragment>
         <Router>
-            <Header />
-            
-                <Route exact path={`/`} render={(props) => {
-              return (<Search setKeyword={this.setKeyword} />)
-            }} />
+          <Header />
 
-            <Route path={`/events`} render={(props) => {
-              return (<Events keyword={this.state.keyword} setKeyword={this.setKeyword} setEvents={this.setEvents} />)
-            }} />
 
-            {/* <Route path={`/user/swapi`} render= {(props) => {
-            return (<User {...props} persons= {this.state.persons} />)
+          <Route exact path={`/`} render={(props) => {
+            return (<Search setKeyword={this.setKeyword} />)
           }} />
-          <Route path={`/admin/swapi`} render= {(props) => {
-            return (<Admin {...props} persons= {this.state.persons} />)
-          }} /> */}
 
-            <Route path={`/eventSingle/:id`} render={(props) => {
-              return (<EventSingle {...props} events={this.state.events} />)
-            }} />
+          <Route path={`/events`} render={(props) => {
+            return (<Events keyword={this.state.keyword} setKeyword={this.setKeyword} setEvents={this.setEvents} />)
+          }} />
+
+          <Route path={`/eventSingle/:id`} render={(props) => {
+            return (<EventSingle {...props} events={this.state.events} />)
+          }} />
+
 
         </Router>
         <Footer />
