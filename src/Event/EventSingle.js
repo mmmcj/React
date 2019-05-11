@@ -18,7 +18,11 @@ function EventSingle({ match, events }) {
                     <section id="description">
                         <h2>{singleEvent.title}</h2>
                         <p>{singleEvent.longDesc}</p>
+
+						{/* Google map ligger her. */}
 						<Geolocated event={singleEvent} />
+
+						{/* Alle fly rejser ligger her */}
                         <Flights lat={singleEvent.city.lattitude} long={singleEvent.city.longitude} event={singleEvent} />
                             
                     </section>
