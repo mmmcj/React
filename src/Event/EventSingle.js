@@ -46,7 +46,7 @@ function EventSingle({ match, events }) {
                             </div>
                         </div>
                     </div>
-                    <section id="reviews">
+                    {/* <section id="reviews">
                         <h2>Reviews</h2>
                         <div className="reviews-container">
 								<div className="row">
@@ -104,7 +104,7 @@ function EventSingle({ match, events }) {
 								</div>
 							</div>
                     </section>
-                    
+                     */}
                 </aside>
             </div>
         </div>
