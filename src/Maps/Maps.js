@@ -28,7 +28,7 @@ class Maps extends React.Component {
       !this.props.isGeolocationAvailable ? <div>Your browser does not support Geolocation</div>
         : !this.props.isGeolocationEnabled ? <div>Geolocation is not enabled</div>
           : this.props.coords ?
-            <div style={{ height: '100vh', width: '100%' }}>
+            <div style={{ height: '60vh', width: '100%' }}>
               <GoogleMapReact
                 defaultCenter={{ lat: this.props.event.city.lattitude, lng: this.props.event.city.longitude }}
                 defaultZoom={this.props.zoom}>

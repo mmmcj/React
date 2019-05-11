@@ -1,62 +1,18 @@
 import React, { useState, Component } from "react";
-import DatePicker from './Date';
 import EventsRandom from '../Event/EventsRandom';
+import Form from './SearchForm';
 
-export default function SearchInput(props) {
+export default function SearchInput() {
 
-  const [keyword, setKeyword] = useState('');
-
-  const handleSubmit = () => {
-    props.setKeyword(keyword);
-    setKeyword('');
-  };
-
-  const handleKeywordInput = e => {
-    setKeyword(e.target.value);
-  };
 
   return (
-    // <div className="container cTop">
-    //   <div classNameName="row">
-    //     <div classNameName="col-md-4">
-    //       <InputGroup classNameName="mb-3">
-    //         <FormControl
-    //           type="text"
-    //           onChange={handleKeywordInput}
-    //           value={keyword}
-    //           placeholder="Search"
-    //         />
-    //         <InputGroup.Append>
-    //           <Button onClick={handleSubmit}>Search</Button>
-    //         </InputGroup.Append>
-    //       </InputGroup>
-    //     </div>
-    //   </div>
-    // </div>
-
     <React.Fragment>
       <section className="hero_single version_2 start_bg_zoom">
         <div className="wrapper">
           <div className="container">
             <h3>Book unique experiences</h3>
             <p>Expolore top rated tours, hotels and restaurants around the world</p>
-            <form>
-              <div className="row no-gutters custom-search-input-2">
-                <div className="col-lg-8">
-                  <div className="form-group">
-                    <input className="form-control" type="text" placeholder="Event..." />
-                  </div>
-                </div>
-                <div class="col-lg-2">
-                  <div class="form-group">
-                    <DatePicker/>
-                  </div>
-                </div>
-                <div class="col-lg-2">
-                  <input type="submit" class="btn_search" value="Search" />
-                </div>
-              </div>
-            </form>
+            <Form/>
           </div>
         </div>
       </section>

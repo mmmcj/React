@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { HashRouter as Router, Route, NavLink, Link } from "react-router-dom";
-import { Navbar, Nav } from 'react-bootstrap'
+import Menu from './Menu';
 
 
 function Header() {
@@ -22,20 +22,7 @@ function Header() {
                 </div>
             </div>
         </a>
-        <nav id="menu" className="main-menu">
-            <ul>
-                <li>
-                    <span>
-                        <Link exact to="/">Home</Link>
-                    </span>
-                </li>
-                <li>
-                    <span>
-                    <Link exact to="/events">Events</Link>
-                    </span>
-                </li>
-            </ul>
-        </nav>
+        <Menu/>
     </header>
     </React.Fragment>
 
