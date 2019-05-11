@@ -1,5 +1,8 @@
 import React from 'react';
 import { Card, Container, Row, Col, Image} from 'react-bootstrap'
+import Geolocated from '../Maps/Maps';
+import Facade from '../Datafacade/Datafacade';
+import Flights from '../FlightInfo/FlightTableView';
 
 function EventSingle({ match, events }) {
   const id = match.params.id;
@@ -15,9 +18,8 @@ function EventSingle({ match, events }) {
                     <section id="description">
                         <h2>{singleEvent.title}</h2>
                         <p>{singleEvent.longDesc}</p>
-                        <div>
-                            <h1>Google map here</h1>
-                        </div>
+						<Geolocated event={singleEvent} />
+                        <Flights lat={singleEvent.city.lattitude} long={singleEvent.city.longitude} event={singleEvent} />
                             
                     </section>
                 </div>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { geolocated, geoPropTypes } from 'react-geolocated';
 import GoogleMapReact from 'google-map-react';
-import Airlogo from '../Event/airportlogo.png';
+import Airlogo from '../Images/airportlogo.png';
 import Arrow from '@material-ui/icons/Place';
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;

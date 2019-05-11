@@ -3,6 +3,8 @@
 // const url = "http://localhost:3000/events";
 // const url_filter = "http://localhost:4001/events";
 const URL = "https://mddenner.dk/Semesterprojekt/api/show/events/"
+const URLFlights = "https://mddenner.dk/Semesterprojekt/api/show/flights/"
+const slash = "/"
 
 function makeOptions(method, body) {
     var opts = {
@@ -49,6 +51,12 @@ class DataFacade {
         const value = "random/";
         console.log(URL + value + numberOfEvents)
         return fetch(URL + value + numberOfEvents).then(handleHttpErrors);
+    }
+
+    getAirPortAndEventByDistance = (Date, Lattitude, longtitude, eventLattitude, eventLongtitude) => {
+        console.log(URLFlights + Date + slash + Lattitude + slash +  longtitude + slash + eventLattitude + slash + eventLongtitude)
+        return fetch(URLFlights + Date + slash + Lattitude + slash +  longtitude + slash + eventLattitude + slash + eventLongtitude)
+            .then(handleHttpErrors); 
     }
 
     // getToken = (credentials) => {
