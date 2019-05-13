@@ -8,6 +8,9 @@ export default function SearchForm(props) {
     const [keyword, setKeyword] = useState('');
 
     const handleSubmit = () => {
+        console.log("hej")
+        props.setKeyword(keyword);
+        console.log(keyword);
         setKeyword('');
     };
 
@@ -29,8 +32,8 @@ export default function SearchForm(props) {
                             />
                         </div>
                     </div>
-                    <div class="col-lg-2">
-                        <div class="form-group">
+                    <div className="col-lg-2">
+                        <div className="form-group">
                             <DatePicker />
                         </div>
                     </div>
@@ -39,6 +42,7 @@ export default function SearchForm(props) {
                         <Link to={`events/`}>
                             <button className="btn btn-primary">Search</button>
                         </Link>
+
                     </div>
                 </div>
             </form>
