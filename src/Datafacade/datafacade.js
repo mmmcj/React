@@ -38,18 +38,15 @@ function handleHttpErrors(res) {
 class DataFacade {
 
     getEvents = () => {
-        console.log(URL)
         return fetch(URL).then(handleHttpErrors);
     }
 
     getEventsBySearch = (keyword) => {
-        console.log(URL + keyword)
         return fetch(URL + keyword).then(handleHttpErrors);
     }
 
     getRandom = (numberOfEvents) => {
         const value = "random/";
-        console.log(URL + value + numberOfEvents)
         return fetch(URL + value + numberOfEvents).then(handleHttpErrors);
     }
 
