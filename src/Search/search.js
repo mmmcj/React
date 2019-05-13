@@ -1,10 +1,32 @@
 import React, { useState, Component } from "react";
 import EventsRandom from '../Event/EventsRandom';
 import Form from './SearchForm';
+import DatePicker from './Date';
+import { Button, InputGroup, FormControl } from 'react-bootstrap'
 
-export default function SearchInput() {
+import EventsSearch from '../Event/EventsSearch';
 
 
+export default class SearchInput extends React.Component {
+constructor(props) {
+  super(props)
+  this.state = {
+    keyword: '',
+  };
+}
+
+
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
+  handleKeywordInput = e => {
+    const searchTerm = e.target.value
+    this.setState({keyword: searchTerm})
+  };
+
+  render(){
   return (
     <React.Fragment>
       <section className="hero_single version_2 start_bg_zoom">
@@ -12,7 +34,28 @@ export default function SearchInput() {
           <div className="container">
             <h3>Book unique experiences</h3>
             <p>Expolore top rated tours, hotels and restaurants around the world</p>
-            <Form/>
+            <form>
+              <div className="row no-gutters custom-search-input-2">
+                <div className="col-lg-8">
+                  <div className="form-group">
+                    <FormControl
+                      type="text"
+                      onChange={this.handleKeywordInput}
+                      value={this.state.k}
+                      placeholder="Search"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-2">
+                  <div class="form-group">
+                    <DatePicker />
+                  </div>
+                </div>
+                <div class="col-lg-2">
+                  <input type="submit" onClick={this.handleSubmit} class="btn_search" value="Search" />
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </section>
@@ -32,7 +75,9 @@ export default function SearchInput() {
           <p>Cum doctus civibus efficiantur imperdiet deterruisset.</p>
         </div>
       </div>
-      <EventsRandom />
+      {this.state.keyword.length === 0 ? <EventsRandom /> :  <EventsSearch keyword={this.state.keyword}/> }
     </React.Fragment>
+  
   );
+  }
 };

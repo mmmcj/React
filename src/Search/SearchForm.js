@@ -1,15 +1,13 @@
 import React, { useState, Component } from "react";
+import {Link} from "react-router-dom";
 import DatePicker from './Date';
 import { Button, InputGroup, FormControl } from 'react-bootstrap'
-
 export default function SearchForm(props) {
 
 
     const [keyword, setKeyword] = useState('');
 
     const handleSubmit = () => {
-        console.log("hej")
-        props.setKeyword(keyword);
         setKeyword('');
     };
 
@@ -38,6 +36,9 @@ export default function SearchForm(props) {
                     </div>
                     <div class="col-lg-2">
                         <input type="submit" onClick={handleSubmit} class="btn_search" value="Search" />
+                        <Link to={`events/`}>
+                            <button className="btn btn-primary">Search</button>
+                        </Link>
                     </div>
                 </div>
             </form>

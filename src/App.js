@@ -37,10 +37,8 @@ class App extends Component {
       <React.Fragment>
         <Router>
           <Header />
-
-
           <Route exact path={`/`} render={(props) => {
-            return (<Search setKeyword={this.setKeyword} />)
+            return (<Search {...props} setKeyword={this.setKeyword} />)
           }} />
 
           <Route path={`/events`} render={(props) => {
