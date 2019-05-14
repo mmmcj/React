@@ -34,8 +34,10 @@ class Flights extends React.Component {
                     <div className="cbp_tmlabel">
                         <h4>{flight.airline}</h4>
                         <p>
-                            DeparturnDate: {flight.departureDate} - departureTime: {flight.departureTime}
+														DeparturnDate: {flight.departureDate} - departureTime: {flight.departureTime}
+														
                         </p>
+												<h4>{flight.startDestenation}</h4>
                     </div>
                 </li>
             ))}
