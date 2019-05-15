@@ -44,13 +44,13 @@ export default class SearchInput extends React.Component {
                       />
                     </div>
                   </div>
-                  <div class="col-lg-2">
-                    <div class="form-group">
+                  <div className="col-lg-2">
+                    <div className="form-group">
                       <DatePicker />
                     </div>
                   </div>
-                  <div class="col-lg-2">
-                    <input type="submit" onClick={this.handleSubmit} class="btn_search" value="Search" />
+                  <div className="col-lg-2">
+                    <input type="submit" onClick={this.handleSubmit} className="btn_search" value="Search" />
                   </div>
                 </div>
               </form>
