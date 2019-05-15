@@ -6,7 +6,6 @@ import { FormControl } from "react-bootstrap";
 
 import EventsSearch from "../Event/EventsSearch";
 
-let check = 0;
 class SearchInput extends Component {
   constructor(props) {
     super(props);
@@ -94,12 +93,11 @@ class SearchInput extends Component {
             <p>Cum doctus civibus efficiantur imperdiet deterruisset.</p>
           </div>
         </div>
-        {this.state.keyword.length === 0 &&
-        check !== this.state.keyword.length ? (
+        {this.state.keyword.length === 0 ? (
           <EventsRandom />
         ) : (
-          <EventsSearch keyword={this.state.keyword} date={this.state.date} />
-        )}
+            <EventsSearch keyword={this.state.keyword} date={this.state.date} />
+          )}
       </React.Fragment>
     );
   }
