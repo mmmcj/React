@@ -5,6 +5,7 @@
 const URL = "https://mddenner.dk/Semesterprojekt/api/show/events/"
 const URLFlights = "https://mddenner.dk/Semesterprojekt/api/show/flights/"
 const slash = "/"
+const singleURL = "https://mddenner.dk/Semesterprojekt/api/show/eventSingle/"
 
 function makeOptions(method, body) {
     var opts = {
@@ -54,6 +55,10 @@ class DataFacade {
         console.log(URLFlights + Date + slash + Lattitude + slash +  longtitude + slash + eventLattitude + slash + eventLongtitude)
         return fetch(URLFlights + Date + slash + Lattitude + slash +  longtitude + slash + eventLattitude + slash + eventLongtitude)
             .then(handleHttpErrors); 
+    }
+    getEventById = (id) => {
+        console.log(singleURL + id)
+        return fetch(singleURL +id).then(handleHttpErrors)
     }
 
     // getToken = (credentials) => {
