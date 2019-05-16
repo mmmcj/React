@@ -8,22 +8,18 @@ class Events extends Component {
   };
 
   componentDidMount = async () => {
-    const eventsByKeyword = await Facade.getEventsBySearch(this.props.keyword);
-    const today = this.props.date.toISOString();
-    // const eventsByDate = await Facade.getEventsBySearch(this.props.keyword);
-    // console.log(today);
-    this.setState({ events: eventsByKeyword });
+    //const today = this.props.date.toISOString();
+    //const eventsByDate = await Facade.getEventsByDate(today);
+    const events = await Facade.getEventsBySearch(this.props.keyword);
+    this.setState({ events });
   };
 
   componentDidUpdate = async prevProps => {
     if (this.props.keyword !== prevProps.keyword) {
-      const eventsByKeyword = await Facade.getEventsBySearch(
-        this.props.keyword
-      );
-      const today = this.props.date.toISOString();
-      //const eventsByDate = await Facade.getEventsBySearch(this.props.keyword);
-      //console.log(today);
-      this.setState({ events: eventsByKeyword });
+      //const today = this.props.date.toISOString();
+      //const eventsByDate = await Facade.getEventsByDate(today);
+      const events = await Facade.getEventsBySearch(this.props.keyword);
+      this.setState({ events });
     }
   };
 

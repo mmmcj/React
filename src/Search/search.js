@@ -54,12 +54,19 @@ class SearchInput extends Component {
                   </div>
                   <div className="col-lg-2">
                     <div className="form-group">
-                      <DatePicker />
+                      <DatePicker
+                        onChange={this.handleChange}
+                        startDate={this.state.date}
+                      />
                     </div>
                   </div>
                   <div className="col-lg-2">
-                    <input type="submit" onClick={this.handleSubmit} className="btn_search" value="Search" />
-
+                    <input
+                      type="submit"
+                      onClick={this.handleSubmit}
+                      className="btn_search"
+                      value="Search"
+                    />
                   </div>
                 </div>
               </form>
@@ -89,8 +96,8 @@ class SearchInput extends Component {
         {this.state.keyword.length === 0 ? (
           <EventsRandom />
         ) : (
-            <EventsSearch keyword={this.state.keyword} date={this.state.date} />
-          )}
+          <EventsSearch keyword={this.state.keyword} date={this.state.date} />
+        )}
       </React.Fragment>
     );
   }
