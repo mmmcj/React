@@ -1,17 +1,16 @@
 import React from 'react'
 import { geolocated, geoPropTypes } from 'react-geolocated';
 import GoogleMapReact from 'google-map-react';
-import Airlogo from '../Images/airportlogo.png';
 import Arrow from '@material-ui/icons/Place';
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
+//const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 
 class Maps extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      coords: [],
+      coords: []
     };
   }
 
@@ -22,6 +21,12 @@ class Maps extends React.Component {
     },
     zoom: 11
   };
+
+ componentWillReceiveProps = (nextProps) => {
+   if(nextProps.coords !== this.props.coords){
+     this.props.setCoords(nextProps.coords.latitude, nextProps.coords.longitude)
+   }
+ }
 
   render() {
     return (
@@ -43,8 +48,10 @@ class Maps extends React.Component {
                   lat={this.props.coords.latitude}
                   lng={this.props.coords.longitude}
                 />         
+                
 
               </GoogleMapReact>
+              
             </div>
             : <div>Getting the location data&hellip; </div>
     );

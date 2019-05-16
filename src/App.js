@@ -46,7 +46,7 @@ class App extends Component {
           }} />
 
           <Route path={`/eventSingle/:id`} render={(props) => {
-            return (<EventSingle {...props} events={this.state.events} />)
+            return (<EventSingle {...props}/>)
           }} />
 
 

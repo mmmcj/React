@@ -11,12 +11,12 @@ export default function Menu(){
             <ul>
                 <li>
                     <span>
-                        <Link exact to="/">Home</Link>
+                        <Link to="/">Home</Link>
                     </span>
                 </li>
                 <li>
                     <span>
-                    <Link exact to="/events">Events</Link>
+                    <Link to="/events">Events</Link>
                     </span>
                 </li>
             </ul>

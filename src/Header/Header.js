@@ -12,7 +12,7 @@ function Header() {
         </div>
         <div id="logo">
             <h1>
-                <Link exact to="/">TicketMaster</Link>
+                <Link to="/">TicketMaster</Link>
             </h1>
         </div>
         <a href="#menu" className="btn_mobile">
