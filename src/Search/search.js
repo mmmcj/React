@@ -3,7 +3,7 @@ import EventsRandom from "../Event/EventsRandom";
 import Form from "./SearchForm";
 import DatePicker from "./Date";
 import { FormControl } from "react-bootstrap";
-
+import EventDate from "./EventsDate"
 import EventsSearch from "../Event/EventsSearch";
 
 class SearchInput extends Component {
@@ -52,23 +52,27 @@ class SearchInput extends Component {
                       />
                     </div>
                   </div>
-                  <div className="col-lg-2">
-                    <div className="form-group">
+                  <div class="col-lg-2">
+                    <div class="form-group">
                       <DatePicker
                         onChange={this.handleChange}
                         startDate={this.state.date}
                       />
                     </div>
                   </div>
-                  <div className="col-lg-2">
+                  <div class="col-lg-2">
                     <input
                       type="submit"
                       onClick={this.handleSubmit}
-                      className="btn_search"
+                      class="btn_search"
                       value="Search"
                     />
                   </div>
                 </div>
+                <EventDate
+                date={this.state.date}
+                />
+
               </form>
             </div>
           </div>
@@ -96,8 +100,8 @@ class SearchInput extends Component {
         {this.state.keyword.length === 0 ? (
           <EventsRandom />
         ) : (
-          <EventsSearch keyword={this.state.keyword} date={this.state.date} />
-        )}
+            <EventsSearch keyword={this.state.keyword} date={this.state.date} />
+          )}
       </React.Fragment>
     );
   }
