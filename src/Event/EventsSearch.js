@@ -1,41 +1,32 @@
-import React from "react";
-import { HashRouter as Router, Route, NavLink, Link } from "react-router-dom";
+import React, { Component } from "react";
+import { HashRouter as Link } from "react-router-dom";
 import Facade from "../Datafacade/Datafacade";
 
-class Events extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      events: []
-    };
-  }
-  
+class Events extends Component {
+  state = {
+    events: []
+  };
 
   componentDidMount = async () => {
-    const events = await Facade.getEvents();
+    //const today = this.props.date.toISOString();
+    //const eventsByDate = await Facade.getEventsByDate(today);
+    const events = await Facade.getEventsBySearch(this.props.keyword);
     this.setState({ events });
-    this.props.setEvents(events);
   };
 
   componentDidUpdate = async prevProps => {
     if (this.props.keyword !== prevProps.keyword) {
-      var events = [];
-      if (this.props.keyword === "") {
-        events = await Facade.getEvents();
-        this.setState({ events });
-        this.props.setEvents(events);
-      } else {
-        events = await Facade.getEventsBySearch(this.props.keyword);
-        this.setState({ events });
-        this.props.setEvents(events);
-      }
+      //const today = this.props.date.toISOString();
+      //const eventsByDate = await Facade.getEventsByDate(today);
+      const events = await Facade.getEventsBySearch(this.props.keyword);
+      this.setState({ events });
     }
   };
 
   render() {
     return (
       <React.Fragment>
-        <div className="container mm" style={{ marginTop: "85px" }}>
+        <div className="container mm">
           <div className="row">
             {this.state.events.map(e => (
               <div className="item" key={e.id}>
@@ -57,9 +48,11 @@ class Events extends React.Component {
                   </figure>
                   <div className="wrapper">
                     <h3>
-                      <Link to={`/eventSingle/${e.id}`}>{e.title}</Link>
+                      <Link to={`/eventSingle/${e.id}`}>
+                        {e.title.substring(0, 12)}
+                      </Link>
                     </h3>
-                    <p>{e.shortDesc.substring(0, 130)}</p>
+                    <p>{e.shortDesc.substring(0, 120)}</p>
                     <span className="price">
                       From <strong>{e.price}</strong> DKK,-
                     </span>

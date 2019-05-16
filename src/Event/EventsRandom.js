@@ -1,38 +1,23 @@
-import React from "react";
+import React, { useState, Component } from "react";
 import { HashRouter as Router, Route, NavLink, Link } from "react-router-dom";
+import { Button, InputGroup, FormControl } from "react-bootstrap";
 import Facade from "../Datafacade/Datafacade";
 
-class Events extends React.Component {
+class RandomEvents extends Component {
   constructor(props) {
     super(props);
     this.state = {
       events: []
     };
   }
-  
 
   componentDidMount = async () => {
-    const events = await Facade.getEvents();
+    const events = await Facade.getRandom(4);
     this.setState({ events });
-    this.props.setEvents(events);
-  };
-
-  componentDidUpdate = async prevProps => {
-    if (this.props.keyword !== prevProps.keyword) {
-      var events = [];
-      if (this.props.keyword === "") {
-        events = await Facade.getEvents();
-        this.setState({ events });
-        this.props.setEvents(events);
-      } else {
-        events = await Facade.getEventsBySearch(this.props.keyword);
-        this.setState({ events });
-        this.props.setEvents(events);
-      }
-    }
   };
 
   render() {
+    console.log("hej54354");
     return (
       <React.Fragment>
         <div className="container mm" style={{ marginTop: "85px" }}>
@@ -57,9 +42,11 @@ class Events extends React.Component {
                   </figure>
                   <div className="wrapper">
                     <h3>
-                      <Link to={`/eventSingle/${e.id}`}>{e.title}</Link>
+                      <Link to={`/eventSingle/${e.id}`}>
+                        {e.title.substring(0, 12)}
+                      </Link>
                     </h3>
-                    <p>{e.shortDesc.substring(0, 130)}</p>
+                    <p>{e.shortDesc.substring(0, 120)}</p>
                     <span className="price">
                       From <strong>{e.price}</strong> DKK,-
                     </span>
@@ -82,4 +69,4 @@ class Events extends React.Component {
   }
 }
 
-export default Events;
+export default RandomEvents;

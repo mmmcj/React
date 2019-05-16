@@ -13,7 +13,10 @@ class Marker extends React.Component {
                     height="30rem"
                     width="20rem"
                     alt="map marker"
+<<<<<<< HEAD
                     
+=======
+>>>>>>> html
                 />
             </div>
         )
